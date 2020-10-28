@@ -133,6 +133,7 @@ SubShader {
 			fixed4	color			: COLOR;
 			float2	texcoord0		: TEXCOORD0;
 			float2	texcoord1		: TEXCOORD1;
+			float2	texcoord3		: TEXCOORD3;
 		};
 
 
@@ -151,6 +152,7 @@ SubShader {
 			fixed4	underlayColor	: COLOR1;
 		#endif
 			float4 textures			: TEXCOORD5;
+			float  outlineWidth		: TEXCOORD6;
 		};
 
 		// Used by Unity internally to handle Texture Tiling and Offset.
@@ -181,11 +183,13 @@ SubShader {
 			if (UNITY_MATRIX_P[3][3] == 0) scale = lerp(abs(scale) * (1 - _PerspectiveFilter), scale, abs(dot(UnityObjectToWorldNormal(input.normal.xyz), normalize(WorldSpaceViewDir(vert)))));
 
 			float weight = lerp(_WeightNormal, _WeightBold, bold) / 4.0;
-			weight = (weight + _FaceDilate) * _ScaleRatioA * 0.5;
+			//weight = (weight + _FaceDilate) * _ScaleRatioA * 0.5;
+			weight = (weight + input.texcoord3.x) * _ScaleRatioA * 0.5;
 
 			float bias =(.5 - weight) + (.5 / scale);
 
-			float alphaClip = (1.0 - _OutlineWidth * _ScaleRatioA - _OutlineSoftness * _ScaleRatioA);
+			//float alphaClip = (1.0 - _OutlineWidth * _ScaleRatioA - _OutlineSoftness * _ScaleRatioA);
+			float alphaClip = (1.0 - input.texcoord3.y * _ScaleRatioA - _OutlineSoftness * _ScaleRatioA);
 		
 		#if GLOW_ON
 			alphaClip = min(alphaClip, 1.0 - _GlowOffset * _ScaleRatioB - _GlowOuter * _ScaleRatioB);
@@ -227,7 +231,7 @@ SubShader {
 			output.underlayColor =	underlayColor;
 			#endif
 			output.textures = float4(faceUV, outlineUV);
-	
+			output.outlineWidth = input.texcoord3.y;
 			return output;
 		}
 
@@ -247,7 +251,8 @@ SubShader {
 			float	weight	= input.param.w;
 			float	sd = (bias - c) * scale;
 
-			float outline = (_OutlineWidth * _ScaleRatioA) * scale;
+			//float outline = (_OutlineWidth * _ScaleRatioA) * scale;
+			float outline = (input.outlineWidth * _ScaleRatioA) * scale;
 			float softness = (_OutlineSoftness * _ScaleRatioA) * scale;
 
 			half4 faceColor = _FaceColor;

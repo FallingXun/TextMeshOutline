@@ -508,6 +508,14 @@ namespace TMPro.Examples
             dst_uv2s[vertexIndex + 3] = src_uv2s[vertexIndex + 3];
 
 
+            // UVS4
+            Vector2[] src_uv4s = m_cachedMeshInfoVertexData[materialIndex].uvs4;
+            Vector2[] dst_uv4s = m_TextMeshPro.textInfo.meshInfo[materialIndex].uvs4;
+            dst_uv4s[vertexIndex + 0] = src_uv4s[vertexIndex + 0];
+            dst_uv4s[vertexIndex + 1] = src_uv4s[vertexIndex + 1];
+            dst_uv4s[vertexIndex + 2] = src_uv4s[vertexIndex + 2];
+            dst_uv4s[vertexIndex + 3] = src_uv4s[vertexIndex + 3];
+
             // Restore last vertex attribute as we swapped it as well
             int lastIndex = (src_vertices.Length / 4 - 1) * 4;
 
@@ -541,6 +549,13 @@ namespace TMPro.Examples
             dst_uv2s[lastIndex + 2] = src_uv2s[lastIndex + 2];
             dst_uv2s[lastIndex + 3] = src_uv2s[lastIndex + 3];
 
+            // UVS4
+            src_uv4s = m_cachedMeshInfoVertexData[materialIndex].uvs4;
+            dst_uv4s = m_TextMeshPro.textInfo.meshInfo[materialIndex].uvs4;
+            dst_uv4s[lastIndex + 0] = src_uv4s[lastIndex + 0];
+            dst_uv4s[lastIndex + 1] = src_uv4s[lastIndex + 1];
+            dst_uv4s[lastIndex + 2] = src_uv4s[lastIndex + 2];
+            dst_uv4s[lastIndex + 3] = src_uv4s[lastIndex + 3];
             // Need to update the appropriate 
             m_TextMeshPro.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
         }

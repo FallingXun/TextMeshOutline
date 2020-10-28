@@ -43,7 +43,7 @@ namespace TMPro
         private bool m_isScrollRegionSet;
         //private Mask m_mask;
         private int m_stencilID = 0;
-      
+
         [SerializeField]
         private Vector4 m_maskOffset;
 
@@ -74,7 +74,7 @@ namespace TMPro
         {
             //Debug.Log("***** Awake() called on object ID " + GetInstanceID() + ". *****");
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Special handling for TMP Settings and importing Essential Resources
             if (TMP_Settings.instance == null)
             {
@@ -84,7 +84,7 @@ namespace TMPro
                 m_isWaitingOnResourceLoad = true;
                 return;
             }
-            #endif
+#endif
 
             // Cache Reference to the Canvas
             m_canvas = this.canvas;
@@ -93,13 +93,13 @@ namespace TMPro
 
             // Cache Reference to RectTransform.
             m_rectTransform = gameObject.GetComponent<RectTransform>();
-            if (m_rectTransform == null)  
+            if (m_rectTransform == null)
                 m_rectTransform = gameObject.AddComponent<RectTransform>();
 
             // Cache a reference to the CanvasRenderer.
             m_canvasRenderer = GetComponent<CanvasRenderer>();
-            if (m_canvasRenderer == null) 
-                m_canvasRenderer = gameObject.AddComponent<CanvasRenderer> ();
+            if (m_canvasRenderer == null)
+                m_canvasRenderer = gameObject.AddComponent<CanvasRenderer>();
 
             if (m_mesh == null)
             {
@@ -161,8 +161,8 @@ namespace TMPro
             if (!m_isRegisteredForEvents)
             {
                 //Debug.Log("Registering for Events.");
-                
-                #if UNITY_EDITOR
+
+#if UNITY_EDITOR
                 // Register Callbacks for various events.
                 TMPro_EventManager.MATERIAL_PROPERTY_EVENT.Add(ON_MATERIAL_PROPERTY_CHANGED);
                 TMPro_EventManager.FONT_PROPERTY_EVENT.Add(ON_FONT_PROPERTY_CHANGED);
@@ -171,7 +171,7 @@ namespace TMPro
                 TMPro_EventManager.TEXT_STYLE_PROPERTY_EVENT.Add(ON_TEXT_STYLE_CHANGED);
                 TMPro_EventManager.COLOR_GRADIENT_PROPERTY_EVENT.Add(ON_COLOR_GRADIENT_CHANGED);
                 TMPro_EventManager.TMP_SETTINGS_PROPERTY_EVENT.Add(ON_TMP_SETTINGS_CHANGED);
-                #endif
+#endif
                 m_isRegisteredForEvents = true;
             }
 
@@ -207,7 +207,7 @@ namespace TMPro
                 return;
 
             if (m_MaskMaterial != null)
-            { 
+            {
                 TMP_MaterialManager.ReleaseStencilMaterial(m_MaskMaterial);
                 m_MaskMaterial = null;
             }
@@ -248,7 +248,7 @@ namespace TMPro
                 m_MaskMaterial = null;
             }
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Unregister the event this object was listening to
             TMPro_EventManager.MATERIAL_PROPERTY_EVENT.Remove(ON_MATERIAL_PROPERTY_CHANGED);
             TMPro_EventManager.FONT_PROPERTY_EVENT.Remove(ON_FONT_PROPERTY_CHANGED);
@@ -258,12 +258,12 @@ namespace TMPro
             TMPro_EventManager.COLOR_GRADIENT_PROPERTY_EVENT.Remove(ON_COLOR_GRADIENT_CHANGED);
             TMPro_EventManager.TMP_SETTINGS_PROPERTY_EVENT.Remove(ON_TMP_SETTINGS_CHANGED);
             TMPro_EventManager.RESOURCE_LOAD_EVENT.Remove(ON_RESOURCES_LOADED);
-            #endif
+#endif
             m_isRegisteredForEvents = false;
         }
 
 
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         protected override void Reset()
         {
             //Debug.Log("***** Reset() *****"); //has been called.");
@@ -431,7 +431,7 @@ namespace TMPro
         void ON_TEXTMESHPRO_UGUI_PROPERTY_CHANGED(bool isChanged, TextMeshProUGUI obj)
         {
             //Debug.Log("Event Received by " + obj);
-            
+
             if (obj == this)
             {
                 //Debug.Log("Undo / Redo Event Received by Object ID:" + GetInstanceID());
@@ -450,11 +450,11 @@ namespace TMPro
             //Debug.Log("Drag-n-Drop Event - Receiving Object ID " + GetInstanceID() + ". Sender ID " + obj.GetInstanceID()); // +  ". Prefab Parent is " + UnityEditor.PrefabUtility.GetPrefabParent(gameObject).GetInstanceID()); // + ". New Material is " + newMaterial.name + " with ID " + newMaterial.GetInstanceID() + ". Base Material is " + m_baseMaterial.name + " with ID " + m_baseMaterial.GetInstanceID());
 
             // Check if event applies to this current object
-            #if UNITY_2018_2_OR_NEWER
+#if UNITY_2018_2_OR_NEWER
             if (obj == gameObject || UnityEditor.PrefabUtility.GetCorrespondingObjectFromSource(gameObject) == obj)
-            #else
+#else
             if (obj == gameObject || UnityEditor.PrefabUtility.GetPrefabParent(gameObject) == obj)
-            #endif
+#endif
             {
                 UnityEditor.Undo.RecordObject(this, "Material Assignment");
                 UnityEditor.Undo.RecordObject(m_canvasRenderer, "Material Assignment");
@@ -503,14 +503,14 @@ namespace TMPro
             m_isInputParsingRequired = true;
             SetAllDirty();
         }
-        #endif
+#endif
 
 
         // Function which loads either the default font or a newly assigned font asset. This function also assigned the appropriate material to the renderer.
         protected override void LoadFontAsset()
         {
             //Debug.Log("***** LoadFontAsset() *****"); //TextMeshPro LoadFontAsset() has been called."); // Current Font Asset is " + (font != null ? font.name: "Null") );
-            
+
             ShaderUtilities.GetShaderPropertyIDs(); // Initialize & Get shader property IDs.
 
             if (m_fontAsset == null)
@@ -660,14 +660,14 @@ namespace TMPro
                     m_sharedMaterial = m_MaskMaterial;
                 else
                     m_sharedMaterial = m_baseMaterial;
-                           
+
                 m_canvasRenderer.SetMaterial(m_sharedMaterial, m_sharedMaterial.GetTexture(ShaderUtilities.ID_MainTex));
 
                 DestroyImmediate(m_fontMaterial);
             }
-              
+
             m_isMaskingEnabled = false;
-            
+
             /*
             if (m_maskingMaterial != null && m_stencilID == 0)
             {
@@ -681,8 +681,8 @@ namespace TMPro
                 m_sharedMaterial.DisableKeyword("MASK_SOFT");
             }
             */
-             
-          
+
+
             /*
             Material mat = m_uiRenderer.GetMaterial();
             if (mat.HasProperty(ShaderUtilities.ID_MaskCoord))
@@ -711,7 +711,7 @@ namespace TMPro
 
                 if (!ShaderUtilities.isInitialized)
                     ShaderUtilities.GetShaderPropertyIDs();
-                
+
                 //Debug.Log("Setting Mask for the first time.");
 
                 m_isScrollRegionSet = true;
@@ -725,9 +725,9 @@ namespace TMPro
                 float width = (m_rectTransform.rect.width - Mathf.Max(m_margin.x, 0) - Mathf.Max(m_margin.z, 0)) / 2 + softnessX;
                 float height = (m_rectTransform.rect.height - Mathf.Max(m_margin.y, 0) - Mathf.Max(m_margin.w, 0)) / 2 + softnessY;
 
-                
+
                 Vector2 center = m_rectTransform.localPosition + new Vector3((0.5f - m_rectTransform.pivot.x) * m_rectTransform.rect.width + (Mathf.Max(m_margin.x, 0) - Mathf.Max(m_margin.z, 0)) / 2, (0.5f - m_rectTransform.pivot.y) * m_rectTransform.rect.height + (-Mathf.Max(m_margin.y, 0) + Mathf.Max(m_margin.w, 0)) / 2);
-        
+
                 //Vector2 center = m_rectTransform.localPosition + new Vector3((0.5f - m_rectTransform.pivot.x) * m_rectTransform.rect.width + (margin.x - margin.z) / 2, (0.5f - m_rectTransform.pivot.y) * m_rectTransform.rect.height + (-margin.y + margin.w) / 2);
                 Vector4 mask = new Vector4(center.x, center.y, width, height);
                 //Debug.Log(mask);
@@ -746,7 +746,7 @@ namespace TMPro
         {
             // Get Shader PropertyIDs if they haven't been cached already.
             ShaderUtilities.GetShaderPropertyIDs();
-            
+
             // Check in case Object is disabled. If so, we don't have a valid reference to the Renderer.
             // This can occur when the Duplicate Material Context menu is used on an inactive object.
             //if (m_canvasRenderer == null)
@@ -797,7 +797,7 @@ namespace TMPro
 
 
         // Function called internally when a new shared material is assigned via the fontSharedMaterial property.
-        protected override void SetSharedMaterial(Material mat) 
+        protected override void SetSharedMaterial(Material mat)
         {
             // Check in case Object is disabled. If so, we don't have a valid reference to the Renderer.
             // This can occur when the Duplicate Material Context menu is used on an inactive object. 
@@ -879,22 +879,23 @@ namespace TMPro
         // This function will create an instance of the Font Material.
         protected override void SetOutlineThickness(float thickness)
         {
-            // Use material instance if one exists. Otherwise, create a new instance of the shared material.
-            if (m_fontMaterial != null && m_sharedMaterial.GetInstanceID() != m_fontMaterial.GetInstanceID())
-            {
-                m_sharedMaterial = m_fontMaterial;
-                m_canvasRenderer.SetMaterial(m_sharedMaterial, m_sharedMaterial.GetTexture(ShaderUtilities.ID_MainTex));
-            }
-            else if(m_fontMaterial == null)
-            {
-                m_fontMaterial = CreateMaterialInstance(m_sharedMaterial);
-                m_sharedMaterial = m_fontMaterial;
-                m_canvasRenderer.SetMaterial(m_sharedMaterial, m_sharedMaterial.GetTexture(ShaderUtilities.ID_MainTex));
-            }
+            //// Use material instance if one exists. Otherwise, create a new instance of the shared material.
+            //if (m_fontMaterial != null && m_sharedMaterial.GetInstanceID() != m_fontMaterial.GetInstanceID())
+            //{
+            //    m_sharedMaterial = m_fontMaterial;
+            //    m_canvasRenderer.SetMaterial(m_sharedMaterial, m_sharedMaterial.GetTexture(ShaderUtilities.ID_MainTex));
+            //}
+            //else if (m_fontMaterial == null)
+            //{
+            //    m_fontMaterial = CreateMaterialInstance(m_sharedMaterial);
+            //    m_sharedMaterial = m_fontMaterial;
+            //    m_canvasRenderer.SetMaterial(m_sharedMaterial, m_sharedMaterial.GetTexture(ShaderUtilities.ID_MainTex));
+            //}
 
-            thickness = Mathf.Clamp01(thickness);
-            m_sharedMaterial.SetFloat(ShaderUtilities.ID_OutlineWidth, thickness);
+            //thickness = Mathf.Clamp01(thickness);
+            //m_sharedMaterial.SetFloat(ShaderUtilities.ID_OutlineWidth, thickness);
             m_padding = GetPaddingForMaterial();
+
         }
 
 
@@ -1000,7 +1001,7 @@ namespace TMPro
         /// <returns></returns>
         protected override float GetPaddingForMaterial(Material mat)
         {
-            m_padding = ShaderUtilities.GetPadding(mat, m_enableExtraPadding, m_isUsingBold);
+            m_padding = ShaderUtilities.GetPadding(mat, m_enableExtraPadding, m_isUsingBold, m_faceDilate, m_outlineWidth);
             m_isMaskingEnabled = ShaderUtilities.IsMaskingEnabled(m_sharedMaterial);
             m_isSDFShader = mat.HasProperty(ShaderUtilities.ID_WeightNormal);
 
@@ -1016,7 +1017,7 @@ namespace TMPro
         {
             ShaderUtilities.GetShaderPropertyIDs();
 
-            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, m_isUsingBold);
+            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, m_isUsingBold, m_faceDilate, m_outlineWidth);
             m_isMaskingEnabled = ShaderUtilities.IsMaskingEnabled(m_sharedMaterial);
             m_isSDFShader = m_sharedMaterial.HasProperty(ShaderUtilities.ID_WeightNormal);
 
@@ -1036,9 +1037,9 @@ namespace TMPro
         protected override int SetArraySizes(UnicodeChar[] chars)
         {
             //Debug.Log("*** SetArraySizes() on Instance ID (" + GetInstanceID() + ") ***");
-            #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
             Profiler.BeginSample("SetArraySizes");
-            #endif
+#endif
 
             int spriteCount = 0;
 
@@ -1484,9 +1485,9 @@ namespace TMPro
                 }
             }
 
-            #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
             Profiler.EndSample();
-            #endif
+#endif
 
             return m_totalCharacterCount;
         }
@@ -1584,6 +1585,12 @@ namespace TMPro
 
                     m_previousLossyScaleY = lossyScaleY;
                 }
+
+                //if (m_hasOutlineChange == true)
+                {
+                    UpdateOutline(m_faceDilate, m_outlineWidth);
+                    m_hasOutlineChange = false;
+                }
             }
 
             // Added to handle legacy animation mode.
@@ -1624,7 +1631,6 @@ namespace TMPro
             //        UpdateMask();
             //    }
 
-
             if (m_havePropertiesChanged || m_isLayoutDirty)
             {
                 //Debug.Log("Properties have changed!"); // Assigned Material is:" + m_sharedMaterial); // New Text is: " + m_text + ".");
@@ -1655,6 +1661,7 @@ namespace TMPro
                 m_ignoreActiveState = false;
 
                 GenerateTextMesh();
+                m_hasOutlineChange = true;
             }
         }
 
@@ -1846,15 +1853,15 @@ namespace TMPro
             loopCountA += 1;
             //Profiler.EndSample();
 
-            #if TMP_PROFILE_PHASES_ON
+#if TMP_PROFILE_PHASES_ON
             Profiler.BeginSample("TMP Generate Text - Phase I");
-            #endif
+#endif
 
             // Parse through Character buffer to read HTML tags and begin creating mesh.
             for (int i = 0; i < m_TextParsingBuffer.Length && m_TextParsingBuffer[i].unicode != 0; i++)
             {
                 charCode = m_TextParsingBuffer[i].unicode;
-                
+
                 // Parse Rich Text Tag
                 #region Parse Rich Text Tag
                 if (m_isRichText && charCode == 60)  // '<'
@@ -1897,9 +1904,9 @@ namespace TMPro
 
                 // Handle Font Styles like LowerCase, UpperCase and SmallCaps.
                 #region Handling of LowerCase, UpperCase and SmallCaps Font Styles
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Handle Font Style");
-                #endif
+#endif
                 float smallCapsMultiplier = 1.0f;
 
                 if (m_textElementType == TMP_TextElementType.Character)
@@ -1926,17 +1933,17 @@ namespace TMPro
                         }
                     }
                 }
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion
 
 
                 // Look up Character Data from Dictionary and cache it.
                 #region Look up Character Data
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Lookup Character Data");
-                #endif
+#endif
                 if (m_textElementType == TMP_TextElementType.Sprite)
                 {
                     // If a sprite is used as a fallback then get a reference to it and set the color to white.
@@ -1987,9 +1994,9 @@ namespace TMPro
 
                     padding = m_currentMaterialIndex == 0 ? m_padding : m_subTextObjects[m_currentMaterialIndex].padding;
                 }
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion
 
 
@@ -2114,9 +2121,9 @@ namespace TMPro
 
                 // Determine the position of the vertices of the Character or Sprite.
                 #region Calculate Vertices Position
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Calculate Vertices Position");
-                #endif
+#endif
                 float fontBaseLineOffset = m_currentFontAsset.faceInfo.baseline * m_fontScale * m_fontScaleMultiplier * m_currentFontAsset.faceInfo.scale;
                 Vector3 top_left;
                 top_left.x = m_xAdvance + ((m_cached_TextElement.glyph.metrics.horizontalBearingX - padding - style_padding + glyphAdjustments.xPlacement) * currentElementScale * (1 - m_charWidthAdjDelta));
@@ -2138,9 +2145,9 @@ namespace TMPro
                 bottom_right.y = bottom_left.y;
                 bottom_right.z = 0;
 
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion
 
 
@@ -2600,9 +2607,9 @@ namespace TMPro
 
                 // Check if Line Spacing of previous line needs to be adjusted.
                 #region Adjust Line Spacing
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Adjust Line Spacing");
-                #endif
+#endif
                 if (m_lineNumber > 0 && !TMP_Math.Approximately(m_maxLineAscender, m_startOfLineAscender) && m_lineHeight == TMP_Math.FLOAT_UNSET && !m_isNewPage)
                 {
                     //Debug.Log("Inline - Adjusting Line Spacing on line #" + m_lineNumber);
@@ -2617,9 +2624,9 @@ namespace TMPro
                     m_SavedWordWrapState.lineOffset = m_lineOffset;
                     m_SavedWordWrapState.previousLineAscender = m_startOfLineAscender;
                 }
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion
 
 
@@ -2635,9 +2642,9 @@ namespace TMPro
 
                 // Check if text Exceeds the vertical bounds of the margin area.
                 #region Check Vertical Bounds & Auto-Sizing
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Check Vertical Bounds");
-                #endif
+#endif
                 if (m_maxAscender - elementDescenderII > marginHeight + 0.0001f)
                 {
                     // Handle Line spacing adjustments
@@ -2805,9 +2812,9 @@ namespace TMPro
                     #endregion End Text Overflow
 
                 }
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion Check Vertical Bounds
 
 
@@ -2859,9 +2866,9 @@ namespace TMPro
 
                 // Handle Line Spacing Adjustments + Word Wrapping & special case for last line.
                 #region Check for Line Feed and Last Character
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Process Linefeed");
-                #endif
+#endif
                 if (charCode == 10 || m_characterCount == totalCharacterCount - 1)
                 {
                     // Check if Line Spacing of previous line needs to be adjusted.
@@ -2954,17 +2961,17 @@ namespace TMPro
                         continue;
                     }
                 }
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion Check for Linefeed or Last Character
 
 
                 // Store Rectangle positions for each Character.
                 #region Save CharacterInfo for the current character.
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Save CharacterInfo & Extents");
-                #endif
+#endif
                 // Determine the bounds of the Mesh.
                 if (m_textInfo.characterInfo[m_characterCount].isVisible)
                 {
@@ -2999,17 +3006,17 @@ namespace TMPro
                     else if (m_characterCount == totalCharacterCount - 1)
                         m_textInfo.pageInfo[m_pageNumber].lastCharacterIndex = m_characterCount;
                 }
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion Saving CharacterInfo
 
 
                 // Save State of Mesh Creation for handling of Word Wrapping
                 #region Save Word Wrapping State
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Save Word Wrapping State");
-                #endif
+#endif
                 if (m_enableWordWrapping || m_overflowMode == TextOverflowModes.Truncate || m_overflowMode == TextOverflowModes.Ellipsis)
                 {
                     if ((char.IsWhiteSpace((char)charCode) || charCode == 0x200B || charCode == 0x2D || charCode == 0xAD) && (!m_isNonBreakingSpace || ignoreNonBreakingSpace) && charCode != 0xA0 && charCode != 0x2007 && charCode != 0x2011 && charCode != 0x202F && charCode != 0x2060)
@@ -3021,7 +3028,7 @@ namespace TMPro
                         isFirstWord = false;
                     }
                     // Handling for East Asian languages
-                    else if ((  charCode > 0x1100 && charCode < 0x11ff || /* Hangul Jamo */
+                    else if ((charCode > 0x1100 && charCode < 0x11ff || /* Hangul Jamo */
                                 charCode > 0x2E80 && charCode < 0x9FFF || /* CJK */
                                 charCode > 0xA960 && charCode < 0xA97F || /* Hangul Jame Extended-A */
                                 charCode > 0xAC00 && charCode < 0xD7FF || /* Hangul Syllables */
@@ -3043,9 +3050,9 @@ namespace TMPro
                         SaveWordWrappingState(ref m_SavedWordWrapState, i, m_characterCount);
 
                 }
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion Save Word Wrapping State
 
                 m_characterCount += 1;
@@ -3071,16 +3078,16 @@ namespace TMPro
 
             m_isCharacterWrappingEnabled = false;
 
-            #if TMP_PROFILE_PHASES_ON
+#if TMP_PROFILE_PHASES_ON
                 Profiler.EndSample();
-            #endif
+#endif
 
             //Debug.Log("Iteration Count: " + loopCountA + ". Final Point Size: " + m_fontSize); // + "  B: " + loopCountB + "  C: " + loopCountC + "  D: " + loopCountD);
 
             // *** PHASE II of Text Generation ***
-            #if TMP_PROFILE_PHASES_ON
+#if TMP_PROFILE_PHASES_ON
                 Profiler.BeginSample("TMP Generate Text - Phase II");
-            #endif
+#endif
 
             // If there are no visible characters... no need to continue
             if (m_characterCount == 0) // && m_visibleSpriteCount == 0)
@@ -3101,9 +3108,9 @@ namespace TMPro
 
             // Handle Text Alignment
             #region Text Vertical Alignment
-            #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
             Profiler.BeginSample("Vertical Text Alignment");
-            #endif
+#endif
             Vector3 anchorOffset = Vector3.zero;
             Vector3[] corners = m_RectTransformCorners; // GetTextContainerLocalCorners();
 
@@ -3178,9 +3185,9 @@ namespace TMPro
                     anchorOffset = (corners[0] + corners[1]) / 2 + new Vector3(0 + margins.x, 0 - (m_maxCapHeight - margins.y - margins.w) / 2, 0);
                     break;
             }
-            #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
             Profiler.EndSample();
-            #endif
+#endif
             #endregion
 
 
@@ -3239,9 +3246,9 @@ namespace TMPro
 
                 // Process Line Justification
                 #region Handle Line Justification
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Horizontal Text Alignment");
-                #endif 
+#endif
                 //if (!characterInfos[i].isIgnoringAlignment)
                 //{
                 switch (lineAlignment)
@@ -3365,9 +3372,9 @@ namespace TMPro
                         break;
                 }
                 //}
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion End Text Justification
 
                 offset = anchorOffset + justificationOffset;
@@ -3387,9 +3394,9 @@ namespace TMPro
 
                             // Setup UV2 based on Character Mapping Options Selected
                             #region Handle UV Mapping Options
-                            #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                             Profiler.BeginSample("UV MAPPING");
-                            #endif
+#endif
                             switch (m_horizontalMapping)
                             {
                                 case TextureMappingOptions.Character:
@@ -3496,16 +3503,16 @@ namespace TMPro
                                     characterInfos[i].vertex_TR.uv2.y = characterInfos[i].vertex_TL.uv2.y;
                                     break;
                             }
-                            #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                             Profiler.EndSample();
-                            #endif
+#endif
                             #endregion End UV Mapping Options
 
                             // Pack UV's so that we can pass Xscale needed for Shader to maintain 1:1 ratio.
                             #region Pack Scale into UV2
-                            #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                             Profiler.BeginSample("Pack UV");
-                            #endif
+#endif
                             xScale = characterInfos[i].scale * (1 - m_charWidthAdjDelta);
                             if (!characterInfos[i].isUsingAlternateTypeface && (characterInfos[i].style & FontStyles.Bold) == FontStyles.Bold) xScale *= -1;
 
@@ -3547,12 +3554,12 @@ namespace TMPro
                             characterInfos[i].vertex_TL.uv2.x = PackUV(x0, y1); characterInfos[i].vertex_TL.uv2.y = xScale;
                             characterInfos[i].vertex_TR.uv2.x = PackUV(x1, y1); characterInfos[i].vertex_TR.uv2.y = xScale;
                             characterInfos[i].vertex_BR.uv2.x = PackUV(x1, y0); characterInfos[i].vertex_BR.uv2.y = xScale;
-                            #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                                 Profiler.EndSample();
-                            #endif
+#endif
                             #endregion
                             break;
-                        
+
                         // SPRITES
                         case TMP_TextElementType.Sprite:
                             // Nothing right now
@@ -3561,9 +3568,9 @@ namespace TMPro
 
                     // Handle maxVisibleCharacters, maxVisibleLines and Overflow Page Mode.
                     #region Handle maxVisibleCharacters / maxVisibleLines / Page Mode
-                    #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                     Profiler.BeginSample("Process MaxVisible Characters & Lines");
-                    #endif
+#endif
                     if (i < m_maxVisibleCharacters && wordCount < m_maxVisibleWords && currentLine < m_maxVisibleLines && m_overflowMode != TextOverflowModes.Page)
                     {
                         characterInfos[i].vertex_BL.position += offset;
@@ -3586,9 +3593,9 @@ namespace TMPro
                         characterInfos[i].vertex_BR.position = Vector3.zero;
                         characterInfos[i].isVisible = false;
                     }
-                    #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                     Profiler.EndSample();
-                    #endif
+#endif
                     #endregion
 
 
@@ -3626,9 +3633,9 @@ namespace TMPro
 
                 // Need to recompute lineExtent to account for the offset from justification.
                 #region Adjust lineExtents resulting from alignment offset
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                     Profiler.BeginSample("Adjust LineExtents");
-                #endif
+#endif
                 if (currentLine != lastLine || i == m_characterCount - 1)
                 {
                     // Update the previous line's extents
@@ -3653,17 +3660,17 @@ namespace TMPro
                         m_textInfo.lineInfo[currentLine].lineExtents.max = new Vector2(m_textInfo.characterInfo[m_textInfo.lineInfo[currentLine].lastVisibleCharacterIndex].topRight.x, m_textInfo.lineInfo[currentLine].ascender);
                     }
                 }
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion
 
 
                 // Track Word Count per line and for the object
                 #region Track Word Count
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Track Word Count");
-                #endif
+#endif
                 if (char.IsLetterOrDigit(currentCharacter) || currentCharacter == 0x2D || currentCharacter == 0xAD || currentCharacter == 0x2010 || currentCharacter == 0x2011)
                 {
                     if (isStartOfWord == false)
@@ -3720,17 +3727,17 @@ namespace TMPro
                         m_textInfo.lineInfo[currentLine].wordCount += 1;
                     }
                 }
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion
 
 
                 // Setup & Handle Underline
                 #region Underline
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.BeginSample("Process Underline & Strikethrough");
-                #endif
+#endif
                 // NOTE: Need to figure out how underline will be handled with multiple fonts and which font will be used for the underline.
                 bool isUnderline = (m_textInfo.characterInfo[i].style & FontStyles.Underline) == FontStyles.Underline;
                 if (isUnderline)
@@ -3997,7 +4004,7 @@ namespace TMPro
                             highlight_start.x = Mathf.Min(highlight_start.x, m_textInfo.characterInfo[i].bottomLeft.x);
                             highlight_start.y = Mathf.Min(highlight_start.y, m_textInfo.characterInfo[i].descender);
 
-                            highlight_end.x = Mathf.Max(highlight_end.x, m_textInfo.characterInfo[i].topRight.x); 
+                            highlight_end.x = Mathf.Max(highlight_end.x, m_textInfo.characterInfo[i].topRight.x);
                             highlight_end.y = Mathf.Max(highlight_end.y, m_textInfo.characterInfo[i].ascender);
                         }
                     }
@@ -4030,9 +4037,9 @@ namespace TMPro
                     }
                 }
                 #endregion
-                #if TMP_PROFILE_ON
+#if TMP_PROFILE_ON
                 Profiler.EndSample();
-                #endif
+#endif
                 #endregion
 
                 lastLine = currentLine;
@@ -4047,23 +4054,23 @@ namespace TMPro
             m_textInfo.wordCount = wordCount != 0 && m_characterCount > 0 ? wordCount : 1;
             m_textInfo.pageCount = m_pageNumber + 1;
 
-            #if TMP_PROFILE_PHASES_ON
+#if TMP_PROFILE_PHASES_ON
                 Profiler.EndSample();
-            #endif
+#endif
 
 
             // *** UPLOAD MESH DATA ***
-            #if TMP_PROFILE_PHASES_ON
+#if TMP_PROFILE_PHASES_ON
                 Profiler.BeginSample("TMP Generate Text - Phase III");
-            #endif
+#endif
             if (m_renderMode == TextRenderFlags.Render && IsActive())
             {
                 // Clear unused vertices
                 //m_textInfo.meshInfo[0].ClearUnusedVertices();
 
                 // Must ensure the Canvas support the additon vertex attributes used by TMP.
-                if (m_canvas.additionalShaderChannels != (AdditionalCanvasShaderChannels)25)
-                    m_canvas.additionalShaderChannels |= (AdditionalCanvasShaderChannels)25;
+                if (m_canvas.additionalShaderChannels != (AdditionalCanvasShaderChannels)31)
+                    m_canvas.additionalShaderChannels |= (AdditionalCanvasShaderChannels)31;
 
                 // Sort the geometry of the text object if needed.
                 if (m_geometrySortingOrder != VertexSortingOrder.Normal)
@@ -4074,7 +4081,7 @@ namespace TMPro
                 m_mesh.vertices = m_textInfo.meshInfo[0].vertices;
                 m_mesh.uv = m_textInfo.meshInfo[0].uvs0;
                 m_mesh.uv2 = m_textInfo.meshInfo[0].uvs2;
-                //m_mesh.uv4 = m_textInfo.meshInfo[0].uvs4;
+                m_mesh.uv4 = m_textInfo.meshInfo[0].uvs4;
                 m_mesh.colors32 = m_textInfo.meshInfo[0].colors32;
 
                 // Compute Bounds for the mesh. Manual computation is more efficient then using Mesh.recalcualteBounds.
@@ -4101,7 +4108,7 @@ namespace TMPro
                     m_subTextObjects[i].mesh.vertices = m_textInfo.meshInfo[i].vertices;
                     m_subTextObjects[i].mesh.uv = m_textInfo.meshInfo[i].uvs0;
                     m_subTextObjects[i].mesh.uv2 = m_textInfo.meshInfo[i].uvs2;
-                    //m_subTextObjects[i].mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
+                    m_subTextObjects[i].mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
                     m_subTextObjects[i].mesh.colors32 = m_textInfo.meshInfo[i].colors32;
 
                     m_subTextObjects[i].mesh.RecalculateBounds();
@@ -4117,9 +4124,9 @@ namespace TMPro
             TMPro_EventManager.ON_TEXT_CHANGED(this);
             //SendOnTextChanged();
 
-            #if TMP_PROFILE_PHASES_ON
+#if TMP_PROFILE_PHASES_ON
                 Profiler.EndSample();
-            #endif
+#endif
 
             //Debug.Log("Done Rendering Text.");
         }
@@ -4261,7 +4268,7 @@ namespace TMPro
                 return;
             }
 
-            for (int materialIndex = 0; materialIndex < m_textInfo.materialCount; materialIndex ++)
+            for (int materialIndex = 0; materialIndex < m_textInfo.materialCount; materialIndex++)
             {
                 TMP_MeshInfo meshInfo = m_textInfo.meshInfo[materialIndex];
 
@@ -4282,6 +4289,43 @@ namespace TMPro
                 else
                 {
                     m_subTextObjects[i].mesh.uv2 = m_textInfo.meshInfo[i].uvs2;
+                    m_subTextObjects[i].canvasRenderer.SetMesh(m_subTextObjects[i].mesh);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 更新描边信息
+        /// </summary>
+        /// <param name="faceDilate"></param>
+        /// <param name="outlineWidth"></param>
+        void UpdateOutline(float faceDilate, float outlineWidth)
+        {
+            outlineWidth = Mathf.Clamp01(outlineWidth);
+            faceDilate = Mathf.Clamp01(faceDilate);
+
+            for (int materialIndex = 0; materialIndex < m_textInfo.materialCount; materialIndex++)
+            {
+                TMP_MeshInfo meshInfo = m_textInfo.meshInfo[materialIndex];
+
+                for (int i = 0; i < meshInfo.uvs4.Length; i++)
+                {
+                    meshInfo.uvs4[i].x = faceDilate;
+                    meshInfo.uvs4[i].y = outlineWidth;
+                }
+            }
+
+            // Push the updated uv4 outline information to the meshes.
+            for (int i = 0; i < m_textInfo.materialCount; i++)
+            {
+                if (i == 0)
+                {
+                    m_mesh.uv4 = m_textInfo.meshInfo[0].uvs4;
+                    m_canvasRenderer.SetMesh(m_mesh);
+                }
+                else
+                {
+                    m_subTextObjects[i].mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
                     m_subTextObjects[i].canvasRenderer.SetMesh(m_subTextObjects[i].mesh);
                 }
             }

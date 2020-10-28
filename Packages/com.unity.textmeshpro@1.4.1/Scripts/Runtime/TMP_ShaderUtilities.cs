@@ -11,41 +11,41 @@ namespace TMPro
         public static int ID_MainTex;
 
         public static int ID_FaceTex;
-        public static int ID_FaceColor; 
+        public static int ID_FaceColor;
         public static int ID_FaceDilate;
         public static int ID_Shininess;
 
         public static int ID_UnderlayColor;
-        public static int ID_UnderlayOffsetX; 
-        public static int ID_UnderlayOffsetY; 
+        public static int ID_UnderlayOffsetX;
+        public static int ID_UnderlayOffsetY;
         public static int ID_UnderlayDilate;
         public static int ID_UnderlaySoftness;
 
-        public static int ID_WeightNormal; 
+        public static int ID_WeightNormal;
         public static int ID_WeightBold;
 
         public static int ID_OutlineTex;
-        public static int ID_OutlineWidth; 
+        public static int ID_OutlineWidth;
         public static int ID_OutlineSoftness;
         public static int ID_OutlineColor;
 
         public static int ID_Padding;
-        public static int ID_GradientScale; 
-        public static int ID_ScaleX; 
-        public static int ID_ScaleY; 
+        public static int ID_GradientScale;
+        public static int ID_ScaleX;
+        public static int ID_ScaleY;
         public static int ID_PerspectiveFilter;
         public static int ID_Sharpness;
 
-        public static int ID_TextureWidth; 
-        public static int ID_TextureHeight; 
+        public static int ID_TextureWidth;
+        public static int ID_TextureHeight;
 
-        public static int ID_BevelAmount; 
+        public static int ID_BevelAmount;
 
-        public static int ID_GlowColor; 
+        public static int ID_GlowColor;
         public static int ID_GlowOffset;
-        public static int ID_GlowPower;  
-        public static int ID_GlowOuter; 
-       
+        public static int ID_GlowPower;
+        public static int ID_GlowOuter;
+
         public static int ID_LightAngle;
 
         public static int ID_EnvMap;
@@ -54,10 +54,10 @@ namespace TMPro
 
         //public static int ID_MaskID;
         public static int ID_MaskCoord;
-        public static int ID_ClipRect; 
-        public static int ID_MaskSoftnessX; 
-        public static int ID_MaskSoftnessY; 
-        public static int ID_VertexOffsetX; 
+        public static int ID_ClipRect;
+        public static int ID_MaskSoftnessX;
+        public static int ID_MaskSoftnessY;
+        public static int ID_VertexOffsetX;
         public static int ID_VertexOffsetY;
         public static int ID_UseClipRect;
 
@@ -66,12 +66,12 @@ namespace TMPro
         public static int ID_StencilComp;
         public static int ID_StencilReadMask;
         public static int ID_StencilWriteMask;
-        
-        public static int ID_ShaderFlags; 
+
+        public static int ID_ShaderFlags;
         public static int ID_ScaleRatio_A;
         public static int ID_ScaleRatio_B;
         public static int ID_ScaleRatio_C;
-        
+
         public static string Keyword_Bevel = "BEVEL_ON";
         public static string Keyword_Glow = "GLOW_ON";
         public static string Keyword_Underlay = "UNDERLAY_ON";
@@ -144,7 +144,7 @@ namespace TMPro
                 ID_FaceColor = Shader.PropertyToID("_FaceColor");
                 ID_FaceDilate = Shader.PropertyToID("_FaceDilate");
                 ID_Shininess = Shader.PropertyToID("_FaceShininess");
-            
+
                 ID_UnderlayColor = Shader.PropertyToID("_UnderlayColor");
                 ID_UnderlayOffsetX = Shader.PropertyToID("_UnderlayOffsetX");
                 ID_UnderlayOffsetY = Shader.PropertyToID("_UnderlayOffsetY");
@@ -215,7 +215,7 @@ namespace TMPro
 
 
         // Scale Ratios to ensure property ranges are optimum in Material Editor  
-        public static void UpdateShaderRatios(Material mat)
+        public static void UpdateShaderRatios(Material mat, float text_faceDilate = 0f, float text_outlineWidth = 0f)
         {
             //Debug.Log("UpdateShaderRatios() called.");
 
@@ -227,8 +227,10 @@ namespace TMPro
 
             // Compute Ratio A
             float scale = mat.GetFloat(ID_GradientScale);
-            float faceDilate = mat.GetFloat(ID_FaceDilate);
-            float outlineThickness = mat.GetFloat(ID_OutlineWidth);
+            //float faceDilate = mat.GetFloat(ID_FaceDilate);
+            float faceDilate = text_faceDilate;
+            //float outlineThickness = mat.GetFloat(ID_OutlineWidth);
+            float outlineThickness = text_outlineWidth;
             float outlineSoftness = mat.GetFloat(ID_OutlineSoftness);
 
             float weight = Mathf.Max(mat.GetFloat(ID_WeightNormal), mat.GetFloat(ID_WeightBold)) / 4.0f;
@@ -241,7 +243,7 @@ namespace TMPro
 
             // Only set the ratio if it has changed.
             //if (ratio_A != ratio_A_old)
-                mat.SetFloat(ID_ScaleRatio_A, ratio_A);
+            mat.SetFloat(ID_ScaleRatio_A, ratio_A);
 
             // Compute Ratio B
             if (mat.HasProperty(ID_GlowOffset))
@@ -258,7 +260,7 @@ namespace TMPro
 
                 // Only set the ratio if it has changed.
                 //if (ratio_B != ratio_B_old)
-                    mat.SetFloat(ID_ScaleRatio_B, ratio_B);
+                mat.SetFloat(ID_ScaleRatio_B, ratio_B);
             }
 
             // Compute Ratio C
@@ -278,7 +280,7 @@ namespace TMPro
 
                 // Only set the ratio if it has changed.
                 //if (ratio_C != ratio_C_old)
-                    mat.SetFloat(ID_ScaleRatio_C, ratio_C);
+                mat.SetFloat(ID_ScaleRatio_C, ratio_C);
             }
         }
 
@@ -320,7 +322,7 @@ namespace TMPro
 
 
         // Function to determine how much extra padding is required as a result of material properties like dilate, outline thickness, softness, glow, etc...
-        public static float GetPadding(Material material, bool enableExtraPadding, bool isBold)
+        public static float GetPadding(Material material, bool enableExtraPadding, bool isBold, float text_faceDilate = 0f, float text_outlineWidth = 0f)
         {
             //Debug.Log("GetPadding() called.");
 
@@ -357,9 +359,9 @@ namespace TMPro
 
             float uniformPadding = 0;
             // Iterate through each of the assigned materials to find the max values to set the padding.
-           
+
             // Update Shader Ratios prior to computing padding
-            UpdateShaderRatios(material);
+            UpdateShaderRatios(material, text_faceDilate, text_outlineWidth);
 
             string[] shaderKeywords = material.shaderKeywords;
 
@@ -368,14 +370,17 @@ namespace TMPro
 
             //weight = 0; // Mathf.Max(material.GetFloat(ID_WeightNormal), material.GetFloat(ID_WeightBold)) / 2.0f * scaleRatio_A;
 
-            if (material.HasProperty(ID_FaceDilate))
-                faceDilate = material.GetFloat(ID_FaceDilate) * scaleRatio_A;
+            //if (material.HasProperty(ID_FaceDilate))
+            //    faceDilate = material.GetFloat(ID_FaceDilate) * scaleRatio_A;
+            faceDilate = text_faceDilate * scaleRatio_A;
 
             if (material.HasProperty(ID_OutlineSoftness))
                 faceSoftness = material.GetFloat(ID_OutlineSoftness) * scaleRatio_A;
 
-            if (material.HasProperty(ID_OutlineWidth))
-                outlineThickness = material.GetFloat(ID_OutlineWidth) * scaleRatio_A;
+            //if (material.HasProperty(ID_OutlineWidth))
+            //    outlineThickness = material.GetFloat(ID_OutlineWidth) * scaleRatio_A;
+            outlineThickness = text_outlineWidth * scaleRatio_A;
+
 
             uniformPadding = outlineThickness + faceSoftness + faceDilate;
 
@@ -443,16 +448,16 @@ namespace TMPro
 
 
         // Function to determine how much extra padding is required as a result of material properties like dilate, outline thickness, softness, glow, etc...
-        public static float GetPadding(Material[] materials, bool enableExtraPadding, bool isBold)
+        public static float GetPadding(Material[] materials, bool enableExtraPadding, bool isBold, float text_faceDilate = 0f, float text_outlineWidth = 0f)
         {
             //Debug.Log("GetPadding() called.");
-            
+
             if (isInitialized == false)
                 GetShaderPropertyIDs();
 
             // Return if Material is null
             if (materials == null) return 0;
-            
+
             int extraPadding = enableExtraPadding ? 4 : 0;
 
             // Check if we are using a Bitmap Shader
@@ -477,21 +482,23 @@ namespace TMPro
             for (int i = 0; i < materials.Length; i++)
             {
                 // Update Shader Ratios prior to computing padding
-                ShaderUtilities.UpdateShaderRatios(materials[i]);
+                ShaderUtilities.UpdateShaderRatios(materials[i], text_faceDilate, text_outlineWidth);
 
                 string[] shaderKeywords = materials[i].shaderKeywords;
 
                 if (materials[i].HasProperty(ShaderUtilities.ID_ScaleRatio_A))
                     scaleRatio_A = materials[i].GetFloat(ShaderUtilities.ID_ScaleRatio_A);
 
-                if (materials[i].HasProperty(ShaderUtilities.ID_FaceDilate))
-                    faceDilate = materials[i].GetFloat(ShaderUtilities.ID_FaceDilate) * scaleRatio_A;
+                //if (materials[i].HasProperty(ShaderUtilities.ID_FaceDilate))
+                //    faceDilate = materials[i].GetFloat(ShaderUtilities.ID_FaceDilate) * scaleRatio_A;
+                faceDilate = text_faceDilate * scaleRatio_A;
 
                 if (materials[i].HasProperty(ShaderUtilities.ID_OutlineSoftness))
                     faceSoftness = materials[i].GetFloat(ShaderUtilities.ID_OutlineSoftness) * scaleRatio_A;
 
-                if (materials[i].HasProperty(ShaderUtilities.ID_OutlineWidth))
-                    outlineThickness = materials[i].GetFloat(ShaderUtilities.ID_OutlineWidth) * scaleRatio_A;
+                //if (materials[i].HasProperty(ShaderUtilities.ID_OutlineWidth))
+                //    outlineThickness = materials[i].GetFloat(ShaderUtilities.ID_OutlineWidth) * scaleRatio_A;
+                outlineThickness = text_outlineWidth * scaleRatio_A;
 
                 uniformPadding = outlineThickness + faceSoftness + faceDilate;
 

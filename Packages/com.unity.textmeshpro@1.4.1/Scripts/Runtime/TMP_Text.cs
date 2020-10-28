@@ -236,7 +236,7 @@ namespace TMPro
         protected Color32 m_strikethroughColor = s_colorWhite;
         protected Color32 m_highlightColor = s_colorWhite;
         protected Vector4 m_highlightPadding = Vector4.zero;
-        
+
 
         /// <summary>
         /// Sets the vertex color alpha value.
@@ -262,7 +262,7 @@ namespace TMPro
 
         [SerializeField]
         protected ColorMode m_colorMode = ColorMode.FourCornersGradient;
-        
+
         /// <summary>
         /// Sets the vertex colors for each of the 4 vertices of the character quads.
         /// </summary>
@@ -363,7 +363,7 @@ namespace TMPro
         [SerializeField]
         protected Color32 m_outlineColor = Color.black;
 
-
+        protected bool m_hasOutlineChange = false;
         /// <summary>
         /// Sets the thickness of the outline of the font. Setting this value will result in an instance of the material.
         /// </summary>
@@ -371,15 +371,21 @@ namespace TMPro
         {
             get
             {
-                if (m_sharedMaterial == null) return m_outlineWidth;
-
-                m_outlineWidth = m_sharedMaterial.GetFloat(ShaderUtilities.ID_OutlineWidth);
                 return m_outlineWidth;
             }
-            set { if (m_outlineWidth == value) return; SetOutlineThickness(value); m_havePropertiesChanged = true; m_outlineWidth = value; SetVerticesDirty(); }
+            set { if (m_outlineWidth == value) return; m_havePropertiesChanged = true; m_outlineWidth = value; SetOutlineThickness(value); SetVerticesDirty(); }
         }
         protected float m_outlineWidth = 0.0f;
 
+        public float faceDilate
+        {
+            get
+            {
+                return m_faceDilate;
+            }
+            set { if (m_faceDilate == value) return; m_havePropertiesChanged = true; m_faceDilate = value; SetOutlineThickness(value); SetVerticesDirty(); }
+        }
+        protected float m_faceDilate = 0.0f;
 
         /// <summary>
         /// The point size of the font.
@@ -531,7 +537,7 @@ namespace TMPro
         public float characterSpacing
         {
             get { return m_characterSpacing; }
-            set { if (m_characterSpacing == value) return; m_havePropertiesChanged = true; m_isCalculateSizeRequired = true;  m_characterSpacing = value; SetVerticesDirty(); SetLayoutDirty(); }
+            set { if (m_characterSpacing == value) return; m_havePropertiesChanged = true; m_isCalculateSizeRequired = true; m_characterSpacing = value; SetVerticesDirty(); SetLayoutDirty(); }
         }
         [SerializeField]
         protected float m_characterSpacing = 0;
@@ -1362,7 +1368,7 @@ namespace TMPro
         // Structures used to save the state of the text layout in conjunction with line breaking / word wrapping.
         protected WordWrapState m_SavedWordWrapState = new WordWrapState();
         protected WordWrapState m_SavedLineState = new WordWrapState();
-		//protected WordWrapState m_SavedAlignment = new WordWrapState ();
+        //protected WordWrapState m_SavedAlignment = new WordWrapState ();
 
 
         // Fields whose state is saved in conjunction with text parsing and word wrapping.
@@ -1502,7 +1508,7 @@ namespace TMPro
         /// </summary>
         protected void SetTextSortingOrder(VertexSortingOrder order)
         {
-            
+
         }
 
         /// <summary>
@@ -1742,12 +1748,12 @@ namespace TMPro
 
             StringToCharArray(text, ref m_TextParsingBuffer);
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Set the text in the Text Input Box in the Unity Editor only.
             // TODO: Could revise to convert to string literal
             if (syncTextInputBox)
                 m_text = text;
-            #endif
+#endif
 
             m_isInputParsingRequired = true;
             m_havePropertiesChanged = true;
@@ -1836,10 +1842,10 @@ namespace TMPro
             m_input_CharArray[index] = (char)0;
             m_charArray_Length = index; // Set the length to where this '0' termination is.
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Create new string to be displayed in the Input Text Box of the Editor Panel.
             m_text = new string(m_input_CharArray, 0, index);
-            #endif
+#endif
 
             m_inputSource = TextInputSources.SetText;
             m_isInputParsingRequired = true;
@@ -1862,10 +1868,10 @@ namespace TMPro
         {
             m_inputSource = TextInputSources.SetCharArray;
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Set the text in the Text Input Box in the Unity Editor only.
             m_text = text.ToString();
-            #endif
+#endif
 
             StringBuilderToIntArray(text, ref m_TextParsingBuffer);
 
@@ -1887,13 +1893,13 @@ namespace TMPro
             // Initialize internal character buffer if necessary
             if (m_TextParsingBuffer == null) m_TextParsingBuffer = new UnicodeChar[8];
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Create new string to be displayed in the Input Text Box of the Editor Panel.
             if (sourceText == null || sourceText.Length == 0)
                 m_text = string.Empty;
             else
                 m_text = new string(sourceText);
-            #endif
+#endif
 
             // Clear the Style stack.
             m_styleStack.Clear();
@@ -1992,7 +1998,7 @@ namespace TMPro
             // Initialize internal character buffer if necessary
             if (m_TextParsingBuffer == null) m_TextParsingBuffer = new UnicodeChar[8];
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Create new string to be displayed in the Input Text Box of the Editor Panel.
             if (sourceText == null || sourceText.Length == 0 || length == 0)
             {
@@ -2005,7 +2011,7 @@ namespace TMPro
                 // TODO: Add potential range check on start + length relative to array size.
                 m_text = new string(sourceText, start, length);
             }
-            #endif
+#endif
 
             // Clear the Style stack.
             m_styleStack.Clear();
@@ -2106,7 +2112,7 @@ namespace TMPro
             // Initialize internal character buffer if necessary
             if (m_TextParsingBuffer == null) m_TextParsingBuffer = new UnicodeChar[8];
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Create new string to be displayed in the Input Text Box of the Editor Panel.
             if (sourceText == null || sourceText.Length == 0 || length == 0)
             {
@@ -2118,7 +2124,7 @@ namespace TMPro
             {
                 m_text = sourceText.IntToString(start, length);
             }
-            #endif
+#endif
 
             // Clear the Style stack.
             m_styleStack.Clear();
@@ -2473,10 +2479,10 @@ namespace TMPro
             // Clear the Style stack.
             m_styleStack.Clear();
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Create new string to be displayed in the Input Text Box of the Editor Panel.
             m_text = sourceText.ToString();
-            #endif
+#endif
 
             int writeIndex = 0;
 
@@ -2653,7 +2659,7 @@ namespace TMPro
                     else if (IsTagName(ref openingTagArray, "</STYLE>", i))
                     {
                         ReplaceClosingStyleTag(ref openingTagArray, i, ref charBuffer, ref writeIndex);
-                        
+
                         // Strip </style> even if style is invalid.
                         i += 7;
                         continue;
@@ -2725,7 +2731,7 @@ namespace TMPro
                     else if (IsTagName(ref openingTagArray, "</STYLE>", i))
                     {
                         ReplaceClosingStyleTag(ref openingTagArray, i, ref charBuffer, ref writeIndex);
-                        
+
                         // Strip </style> even if style is invalid.
                         i += 7;
                         continue;
@@ -3172,10 +3178,10 @@ namespace TMPro
         /// <param name="tag"></param>
         /// <param name="index"></param>
         /// <returns></returns>
-        bool IsTagName (ref string text, string tag, int index)
+        bool IsTagName(ref string text, string tag, int index)
         {
             if (text.Length < index + tag.Length) return false;
-            
+
             for (int i = 0; i < tag.Length; i++)
             {
                 if (TMP_TextUtilities.ToUpperFast(text[index + i]) != tag[i]) return false;
@@ -3348,7 +3354,7 @@ namespace TMPro
         /// <summary>
         /// 
         /// </summary>
-        void ResizeInternalArray <T>(ref T[] array)
+        void ResizeInternalArray<T>(ref T[] array)
         {
             int size = Mathf.NextPowerOfTwo(array.Length + 1);
 
@@ -4041,7 +4047,7 @@ namespace TMPro
                 m_maxLineAscender = elementAscender > m_maxLineAscender ? elementAscender : m_maxLineAscender;
 
                 // Compute and save text element Descender and maximum line Descender.
-                float elementDescender = m_currentFontAsset.faceInfo.descentLine * (m_textElementType == TMP_TextElementType.Character ? currentElementScale / smallCapsMultiplier: m_internalCharacterInfo[m_characterCount].scale) + m_baselineOffset;
+                float elementDescender = m_currentFontAsset.faceInfo.descentLine * (m_textElementType == TMP_TextElementType.Character ? currentElementScale / smallCapsMultiplier : m_internalCharacterInfo[m_characterCount].scale) + m_baselineOffset;
                 float elementDescenderII = m_internalCharacterInfo[m_characterCount].descender = elementDescender - m_lineOffset;
                 m_maxLineDescender = elementDescender < m_maxLineDescender ? elementDescender : m_maxLineDescender;
 
@@ -5051,10 +5057,10 @@ namespace TMPro
 
 
             // Setup UVS4
-            //m_textInfo.meshInfo[0].uvs4[0 + index_X4] = characterInfoArray[i].vertex_BL.uv4;
-            //m_textInfo.meshInfo[0].uvs4[1 + index_X4] = characterInfoArray[i].vertex_TL.uv4;
-            //m_textInfo.meshInfo[0].uvs4[2 + index_X4] = characterInfoArray[i].vertex_TR.uv4;
-            //m_textInfo.meshInfo[0].uvs4[3 + index_X4] = characterInfoArray[i].vertex_BR.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[0 + index_X4] = characterInfoArray[i].vertex_BL.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[1 + index_X4] = characterInfoArray[i].vertex_TL.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[2 + index_X4] = characterInfoArray[i].vertex_TR.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[3 + index_X4] = characterInfoArray[i].vertex_BR.uv4;
 
 
             // setup Vertex Colors
@@ -5121,10 +5127,10 @@ namespace TMPro
 
 
             // Setup UVS4
-            //m_textInfo.meshInfo[0].uvs4[0 + index_X4] = characterInfoArray[i].vertex_BL.uv4;
-            //m_textInfo.meshInfo[0].uvs4[1 + index_X4] = characterInfoArray[i].vertex_TL.uv4;
-            //m_textInfo.meshInfo[0].uvs4[2 + index_X4] = characterInfoArray[i].vertex_TR.uv4;
-            //m_textInfo.meshInfo[0].uvs4[3 + index_X4] = characterInfoArray[i].vertex_BR.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[0 + index_X4] = characterInfoArray[i].vertex_BL.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[1 + index_X4] = characterInfoArray[i].vertex_TL.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[2 + index_X4] = characterInfoArray[i].vertex_TR.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[3 + index_X4] = characterInfoArray[i].vertex_BR.uv4;
 
 
             // setup Vertex Colors
@@ -5181,10 +5187,10 @@ namespace TMPro
 
 
             // Setup UVS4
-            //m_textInfo.meshInfo[0].uvs4[0 + index_X4] = characterInfoArray[i].vertex_BL.uv4;
-            //m_textInfo.meshInfo[0].uvs4[1 + index_X4] = characterInfoArray[i].vertex_TL.uv4;
-            //m_textInfo.meshInfo[0].uvs4[2 + index_X4] = characterInfoArray[i].vertex_TR.uv4;
-            //m_textInfo.meshInfo[0].uvs4[3 + index_X4] = characterInfoArray[i].vertex_BR.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[0 + index_X4] = characterInfoArray[i].vertex_BL.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[1 + index_X4] = characterInfoArray[i].vertex_TL.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[2 + index_X4] = characterInfoArray[i].vertex_TR.uv4;
+            m_textInfo.meshInfo[materialIndex].uvs4[3 + index_X4] = characterInfoArray[i].vertex_BR.uv4;
 
 
             // setup Vertex Colors
@@ -5477,10 +5483,10 @@ namespace TMPro
             // Check & Assign Underline Character for use with the Underline tag.
             if (!fontAsset.characterLookupTable.TryGetValue(95, out m_cached_Underline_Character))
             {
-                m_cached_Underline_Character = TMP_FontAssetUtilities.GetCharacterFromFontAsset(95,fontAsset, false, m_FontStyleInternal, (FontWeight)m_FontWeightInternal, out isUsingAlternativeTypeface, out tempFontAsset);
+                m_cached_Underline_Character = TMP_FontAssetUtilities.GetCharacterFromFontAsset(95, fontAsset, false, m_FontStyleInternal, (FontWeight)m_FontWeightInternal, out isUsingAlternativeTypeface, out tempFontAsset);
 
                 if (m_cached_Underline_Character == null)
-            {
+                {
                     if (!TMP_Settings.warningsDisabled)
                         Debug.LogWarning("The character used for Underline and Strikethrough is not available in font asset [" + fontAsset.name + "].", this);
                 }
@@ -5492,7 +5498,7 @@ namespace TMPro
                 m_cached_Ellipsis_Character = TMP_FontAssetUtilities.GetCharacterFromFontAsset(8230, fontAsset, false, m_FontStyleInternal, (FontWeight)m_FontWeightInternal, out isUsingAlternativeTypeface, out tempFontAsset);
 
                 if (m_cached_Ellipsis_Character == null)
-            {
+                {
                     if (!TMP_Settings.warningsDisabled)
                         Debug.LogWarning("The character used for Ellipsis is not available in font asset [" + fontAsset.name + "].", this);
                 }
@@ -6004,10 +6010,10 @@ namespace TMPro
                     if (isIntegerValue)
                         value = value * 10 + (c - 48) * valueSignMultiplier;
                     else
-                {
+                    {
                         value = value + (c - 48) * decimalPointMultiplier * valueSignMultiplier;
                         decimalPointMultiplier *= 0.1f;
-                }
+                    }
 
                     continue;
                 }
@@ -6015,7 +6021,7 @@ namespace TMPro
                 {
                     if (i + 1 < endIndex && chars[i + 1] == ' ')
                         lastIndex = i + 1;
-                else
+                    else
                         lastIndex = i;
 
                     return value;
@@ -6229,7 +6235,7 @@ namespace TMPro
             //    Debug.Log("Tag [" + i + "] with HashCode: " + m_xmlAttribute[i].nameHashCode + " has value of [" + new string(m_htmlTag, m_xmlAttribute[i].valueStartIndex, m_xmlAttribute[i].valueLength) + "] Numerical Value: " + ConvertToFloat(m_htmlTag, m_xmlAttribute[i].valueStartIndex, m_xmlAttribute[i].valueLength));
 
             #region Rich Text Tag Processing
-            #if !RICH_TEXT_ENABLED
+#if !RICH_TEXT_ENABLED
             // Special handling of the no parsing tag </noparse> </NOPARSE> tag
             if (tag_NoParsing && (m_xmlAttribute[0].nameHashCode != 53822163 && m_xmlAttribute[0].nameHashCode != 49429939))
                 return false;
@@ -6312,7 +6318,7 @@ namespace TMPro
                         if (m_xmlAttribute[1].nameHashCode == 281955 || m_xmlAttribute[1].nameHashCode == 192323)
                         {
                             m_strikethroughColor = HexCharsToColor(m_htmlTag, m_xmlAttribute[1].valueStartIndex, m_xmlAttribute[1].valueLength);
-                            m_strikethroughColor.a = m_htmlColor.a < m_strikethroughColor.a ? (byte)(m_htmlColor.a) : (byte)(m_strikethroughColor .a);
+                            m_strikethroughColor.a = m_htmlColor.a < m_strikethroughColor.a ? (byte)(m_htmlColor.a) : (byte)(m_strikethroughColor.a);
                         }
                         else
                             m_strikethroughColor = m_htmlColor;
@@ -6377,7 +6383,7 @@ namespace TMPro
                                     int paramCount = GetAttributeParameters(m_htmlTag, m_xmlAttribute[i].valueStartIndex, m_xmlAttribute[i].valueLength, ref m_attributeParameterValues);
                                     if (paramCount != 4) return false;
 
-                                    m_highlightPadding = new Vector4(m_attributeParameterValues[0], m_attributeParameterValues[1], m_attributeParameterValues[2], m_attributeParameterValues[3]); 
+                                    m_highlightPadding = new Vector4(m_attributeParameterValues[0], m_attributeParameterValues[1], m_attributeParameterValues[2], m_attributeParameterValues[3]);
                                     break;
                             }
                         }
@@ -6771,7 +6777,7 @@ namespace TMPro
 
                             m_currentMaterial = tempMaterial;
 
-                            m_currentMaterialIndex = MaterialReference.AddMaterialReference(m_currentMaterial, m_currentFontAsset , m_materialReferences, m_materialReferenceIndexLookup);
+                            m_currentMaterialIndex = MaterialReference.AddMaterialReference(m_currentMaterial, m_currentFontAsset, m_materialReferences, m_materialReferenceIndexLookup);
 
                             m_materialReferenceStack.Add(m_materialReferences[m_currentMaterialIndex]);
                         }
@@ -7462,7 +7468,7 @@ namespace TMPro
                         switch (tagUnitType)
                         {
                             case TagUnitType.Pixels:
-                                m_lineHeight = value * (m_isOrthographic ? 1 : 0.1f); 
+                                m_lineHeight = value * (m_isOrthographic ? 1 : 0.1f);
                                 break;
                             case TagUnitType.FontUnits:
                                 m_lineHeight = value * (m_isOrthographic ? 1 : 0.1f) * m_currentFontSize;
@@ -7621,7 +7627,7 @@ namespace TMPro
                         return true;
                 }
             }
-            #endif
+#endif
             #endregion
 
             return false;

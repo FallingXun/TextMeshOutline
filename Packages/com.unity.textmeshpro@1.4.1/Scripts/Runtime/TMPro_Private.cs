@@ -814,14 +814,14 @@ namespace TMPro
         // This function will create an instance of the Font Material.
         protected override void SetOutlineThickness(float thickness)
         {
-            thickness = Mathf.Clamp01(thickness);
-            m_renderer.material.SetFloat(ShaderUtilities.ID_OutlineWidth, thickness);
+            //thickness = Mathf.Clamp01(thickness);
+            //m_renderer.material.SetFloat(ShaderUtilities.ID_OutlineWidth, thickness);
 
-            if (m_fontMaterial == null)
-                m_fontMaterial = m_renderer.material;
+            //if (m_fontMaterial == null)
+            //    m_fontMaterial = m_renderer.material;
 
-            m_fontMaterial = m_renderer.material;
-            m_sharedMaterial = m_fontMaterial;
+            //m_fontMaterial = m_renderer.material;
+            //m_sharedMaterial = m_fontMaterial;
             m_padding = GetPaddingForMaterial();
         }
 
@@ -939,7 +939,7 @@ namespace TMPro
         /// <returns></returns>
         protected override float GetPaddingForMaterial(Material mat)
         {
-            m_padding = ShaderUtilities.GetPadding(mat, m_enableExtraPadding, m_isUsingBold);
+            m_padding = ShaderUtilities.GetPadding(mat, m_enableExtraPadding, m_isUsingBold, m_faceDilate, m_outlineWidth);
             m_isMaskingEnabled = ShaderUtilities.IsMaskingEnabled(m_sharedMaterial);
             m_isSDFShader = mat.HasProperty(ShaderUtilities.ID_WeightNormal);
 
@@ -957,7 +957,7 @@ namespace TMPro
 
             if (m_sharedMaterial == null) return 0;
 
-            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, m_isUsingBold);
+            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, m_isUsingBold, m_faceDilate, m_outlineWidth);
             m_isMaskingEnabled = ShaderUtilities.IsMaskingEnabled(m_sharedMaterial);
             m_isSDFShader = m_sharedMaterial.HasProperty(ShaderUtilities.ID_WeightNormal);
 
@@ -1548,6 +1548,7 @@ namespace TMPro
                 m_ignoreActiveState = false;
 
                 GenerateTextMesh();
+                m_hasOutlineChange = true;
             }
         }
 
@@ -3820,7 +3821,7 @@ namespace TMPro
                 m_mesh.vertices = m_textInfo.meshInfo[0].vertices;
                 m_mesh.uv = m_textInfo.meshInfo[0].uvs0;
                 m_mesh.uv2 = m_textInfo.meshInfo[0].uvs2;
-                //m_mesh.uv4 = m_textInfo.meshInfo[0].uvs4;
+                m_mesh.uv4 = m_textInfo.meshInfo[0].uvs4;
                 m_mesh.colors32 = m_textInfo.meshInfo[0].colors32;
 
                 // Compute Bounds for the mesh. Manual computation is more efficient then using Mesh.recalcualteBounds.
@@ -3841,7 +3842,7 @@ namespace TMPro
                     m_subTextObjects[i].mesh.vertices = m_textInfo.meshInfo[i].vertices;
                     m_subTextObjects[i].mesh.uv = m_textInfo.meshInfo[i].uvs0;
                     m_subTextObjects[i].mesh.uv2 = m_textInfo.meshInfo[i].uvs2;
-                    //m_subTextObjects[i].mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
+                    m_subTextObjects[i].mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
                     m_subTextObjects[i].mesh.colors32 = m_textInfo.meshInfo[i].colors32;
 
                     m_subTextObjects[i].mesh.RecalculateBounds();

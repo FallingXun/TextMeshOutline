@@ -162,7 +162,9 @@ namespace TMPro
         /// </summary>
         public new CanvasRenderer canvasRenderer
         {
-            get { if (m_canvasRenderer == null) m_canvasRenderer = GetComponent<CanvasRenderer>();
+            get
+            {
+                if (m_canvasRenderer == null) m_canvasRenderer = GetComponent<CanvasRenderer>();
 
                 return m_canvasRenderer;
             }
@@ -249,7 +251,7 @@ namespace TMPro
             if (!m_isRegisteredForEvents)
             {
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
                 TMPro_EventManager.MATERIAL_PROPERTY_EVENT.Add(ON_MATERIAL_PROPERTY_CHANGED);
                 TMPro_EventManager.FONT_PROPERTY_EVENT.Add(ON_FONT_PROPERTY_CHANGED);
                 //TMPro_EventManager.TEXTMESHPRO_PROPERTY_EVENT.Add(ON_TEXTMESHPRO_PROPERTY_CHANGED);
@@ -257,7 +259,7 @@ namespace TMPro
                 //TMPro_EventManager.TEXT_STYLE_PROPERTY_EVENT.Add(ON_TEXT_STYLE_CHANGED);
                 TMPro_EventManager.SPRITE_ASSET_PROPERTY_EVENT.Add(ON_SPRITE_ASSET_PROPERTY_CHANGED);
                 //TMPro_EventManager.TMP_SETTINGS_PROPERTY_EVENT.Add(ON_TMP_SETTINGS_CHANGED);
-            #endif
+#endif
 
                 m_isRegisteredForEvents = true;
             }
@@ -318,7 +320,7 @@ namespace TMPro
             //TMPro_EventManager.TEXT_STYLE_PROPERTY_EVENT.Remove(ON_TEXT_STYLE_CHANGED);
             TMPro_EventManager.SPRITE_ASSET_PROPERTY_EVENT.Remove(ON_SPRITE_ASSET_PROPERTY_CHANGED);
             //TMPro_EventManager.TMP_SETTINGS_PROPERTY_EVENT.Remove(ON_TMP_SETTINGS_CHANGED);
-        #endif
+#endif
 
             m_isRegisteredForEvents = false;
 
@@ -399,11 +401,11 @@ namespace TMPro
         void ON_DRAG_AND_DROP_MATERIAL(GameObject obj, Material currentMaterial, Material newMaterial)
         {
             // Check if event applies to this current object
-            #if UNITY_2018_2_OR_NEWER
+#if UNITY_2018_2_OR_NEWER
             if (obj == gameObject || UnityEditor.PrefabUtility.GetCorrespondingObjectFromSource(gameObject) == obj)
-            #else
+#else
             if (obj == gameObject || UnityEditor.PrefabUtility.GetPrefabParent(gameObject) == obj)
-            #endif
+#endif
             {
                 if (!m_isDefaultMaterial) return;
 
@@ -505,7 +507,7 @@ namespace TMPro
         /// <returns></returns>
         public float GetPaddingForMaterial()
         {
-            float padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_TextComponent.extraPadding, m_TextComponent.isUsingBold);
+            float padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_TextComponent.extraPadding, m_TextComponent.isUsingBold, m_TextComponent.faceDilate, m_TextComponent.outlineWidth);
 
             return padding;
         }
@@ -517,7 +519,7 @@ namespace TMPro
         /// <returns></returns>
         public float GetPaddingForMaterial(Material mat)
         {
-            float padding = ShaderUtilities.GetPadding(mat, m_TextComponent.extraPadding, m_TextComponent.isUsingBold);
+            float padding = ShaderUtilities.GetPadding(mat, m_TextComponent.extraPadding, m_TextComponent.isUsingBold, m_TextComponent.faceDilate, m_TextComponent.outlineWidth);
 
             return padding;
         }
@@ -528,9 +530,9 @@ namespace TMPro
         /// </summary>
         /// <param name="isExtraPadding"></param>
         /// <param name="isBold"></param>
-        public void UpdateMeshPadding(bool isExtraPadding, bool isUsingBold)
+        public void UpdateMeshPadding(bool isExtraPadding, bool isUsingBold, float text_faceDiate = 0f, float text_outlineWidth = 0f)
         {
-            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, isExtraPadding, isUsingBold);
+            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, isExtraPadding, isUsingBold, text_faceDiate, text_outlineWidth);
         }
 
 
@@ -671,10 +673,10 @@ namespace TMPro
             m_canvasRenderer.SetMaterial(materialForRendering, 0);
             m_canvasRenderer.SetTexture(mainTexture);
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             if (m_sharedMaterial != null && gameObject.name != "TMP SubMeshUI [" + m_sharedMaterial.name + "]")
                 gameObject.name = "TMP SubMeshUI [" + m_sharedMaterial.name + "]";
-            #endif
+#endif
         }
 
 

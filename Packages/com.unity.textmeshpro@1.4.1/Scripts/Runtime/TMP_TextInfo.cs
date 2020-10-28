@@ -178,6 +178,7 @@ namespace TMPro
                     m_CachedMeshInfo[i].vertices = new Vector3[length];
                     m_CachedMeshInfo[i].uvs0 = new Vector2[length];
                     m_CachedMeshInfo[i].uvs2 = new Vector2[length];
+                    m_CachedMeshInfo[i].uvs4 = new Vector2[length];
                     m_CachedMeshInfo[i].colors32 = new Color32[length];
 
                     //m_CachedMeshInfo[i].normals = new Vector3[length];
@@ -195,6 +196,7 @@ namespace TMPro
                     m_CachedMeshInfo[i].vertices = new Vector3[length];
                     m_CachedMeshInfo[i].uvs0 = new Vector2[length];
                     m_CachedMeshInfo[i].uvs2 = new Vector2[length];
+                    m_CachedMeshInfo[i].uvs4 = new Vector2[length];
                     m_CachedMeshInfo[i].colors32 = new Color32[length];
 
                     //m_CachedMeshInfo[i].normals = new Vector3[length];
@@ -207,6 +209,7 @@ namespace TMPro
                 Array.Copy(meshInfo[i].vertices, m_CachedMeshInfo[i].vertices, length);
                 Array.Copy(meshInfo[i].uvs0, m_CachedMeshInfo[i].uvs0, length);
                 Array.Copy(meshInfo[i].uvs2, m_CachedMeshInfo[i].uvs2, length);
+                Array.Copy(meshInfo[i].uvs4, m_CachedMeshInfo[i].uvs4, length);
                 Array.Copy(meshInfo[i].colors32, m_CachedMeshInfo[i].colors32, length);
 
                 //Array.Copy(meshInfo[i].normals, m_CachedMeshInfo[i].normals, length);
