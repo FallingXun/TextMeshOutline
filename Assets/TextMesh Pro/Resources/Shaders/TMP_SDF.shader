@@ -152,7 +152,7 @@ SubShader {
 			fixed4	underlayColor	: COLOR1;
 		#endif
 			float4 textures			: TEXCOORD5;
-			float  outlineWidth		: TEXCOORD6;
+			float2  outlineParam	: TEXCOORD6;
 		};
 
 		// Used by Unity internally to handle Texture Tiling and Offset.
@@ -184,12 +184,13 @@ SubShader {
 
 			float weight = lerp(_WeightNormal, _WeightBold, bold) / 4.0;
 			//weight = (weight + _FaceDilate) * _ScaleRatioA * 0.5;
-			weight = (weight + input.texcoord3.x) * _ScaleRatioA * 0.5;
+			float2 outline = UnpackUV(input.texcoord3.x);
+			weight = (weight + outline.x) * input.texcoord3.y * 0.5;
 
 			float bias =(.5 - weight) + (.5 / scale);
 
 			//float alphaClip = (1.0 - _OutlineWidth * _ScaleRatioA - _OutlineSoftness * _ScaleRatioA);
-			float alphaClip = (1.0 - input.texcoord3.y * _ScaleRatioA - _OutlineSoftness * _ScaleRatioA);
+			float alphaClip = (1.0 - outline.y * input.texcoord3.y - _OutlineSoftness * input.texcoord3.y);
 		
 		#if GLOW_ON
 			alphaClip = min(alphaClip, 1.0 - _GlowOffset * _ScaleRatioB - _GlowOuter * _ScaleRatioB);
@@ -231,7 +232,7 @@ SubShader {
 			output.underlayColor =	underlayColor;
 			#endif
 			output.textures = float4(faceUV, outlineUV);
-			output.outlineWidth = input.texcoord3.y;
+			output.outlineParam = float2(outline.y, input.texcoord3.y);
 			return output;
 		}
 
@@ -252,8 +253,9 @@ SubShader {
 			float	sd = (bias - c) * scale;
 
 			//float outline = (_OutlineWidth * _ScaleRatioA) * scale;
-			float outline = (input.outlineWidth * _ScaleRatioA) * scale;
-			float softness = (_OutlineSoftness * _ScaleRatioA) * scale;
+			float outline = (input.outlineParam.x * input.outlineParam.y) * scale;
+			//float softness = (_OutlineSoftness * _ScaleRatioA) * scale;
+			float softness = (_OutlineSoftness *  input.outlineParam.y) * scale;
 
 			half4 faceColor = _FaceColor;
 			half4 outlineColor = _OutlineColor;
@@ -309,7 +311,8 @@ SubShader {
 			clip(faceColor.a - 0.001);
 		#endif
 
-  		return faceColor * input.color.a;
+  		//return faceColor * input.color.a;
+  		return fixed4(input.outlineParam.y,0,0,1);
 		}
 
 		ENDCG

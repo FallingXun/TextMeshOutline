@@ -276,7 +276,7 @@ namespace TMPro
         /// </summary>
         public override void UpdateMeshPadding()
         {
-            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, m_isUsingBold, m_faceDilate, m_outlineWidth);
+            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, m_isUsingBold, this);
             m_isMaskingEnabled = ShaderUtilities.IsMaskingEnabled(m_sharedMaterial);
             m_havePropertiesChanged = true;
             checkPaddingRequired = false;
@@ -286,7 +286,7 @@ namespace TMPro
 
             // Update sub text objects
             for (int i = 1; i < m_textInfo.materialCount; i++)
-                m_subTextObjects[i].UpdateMeshPadding(m_enableExtraPadding, m_isUsingBold, m_faceDilate, m_outlineWidth);
+                m_subTextObjects[i].UpdateMeshPadding(m_enableExtraPadding, m_isUsingBold, this);
         }
 
 

@@ -939,7 +939,7 @@ namespace TMPro
         /// <returns></returns>
         protected override float GetPaddingForMaterial(Material mat)
         {
-            m_padding = ShaderUtilities.GetPadding(mat, m_enableExtraPadding, m_isUsingBold, m_faceDilate, m_outlineWidth);
+            m_padding = ShaderUtilities.GetPadding(mat, m_enableExtraPadding, m_isUsingBold, this);
             m_isMaskingEnabled = ShaderUtilities.IsMaskingEnabled(m_sharedMaterial);
             m_isSDFShader = mat.HasProperty(ShaderUtilities.ID_WeightNormal);
 
@@ -957,7 +957,7 @@ namespace TMPro
 
             if (m_sharedMaterial == null) return 0;
 
-            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, m_isUsingBold, m_faceDilate, m_outlineWidth);
+            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, m_isUsingBold, this);
             m_isMaskingEnabled = ShaderUtilities.IsMaskingEnabled(m_sharedMaterial);
             m_isSDFShader = m_sharedMaterial.HasProperty(ShaderUtilities.ID_WeightNormal);
 
@@ -1958,7 +1958,8 @@ namespace TMPro
                     if (m_currentMaterial.HasProperty(ShaderUtilities.ID_GradientScale))
                     {
                         float gradientScale = m_currentMaterial.GetFloat(ShaderUtilities.ID_GradientScale);
-                        style_padding = m_currentFontAsset.boldStyle / 4.0f * gradientScale * m_currentMaterial.GetFloat(ShaderUtilities.ID_ScaleRatio_A);
+                        //style_padding = m_currentFontAsset.boldStyle / 4.0f * gradientScale * m_currentMaterial.GetFloat(ShaderUtilities.ID_ScaleRatio_A);
+                        style_padding = m_currentFontAsset.boldStyle / 4.0f * gradientScale * scaleRatioA;
 
                         // Clamp overall padding to Gradient Scale size.
                         if (style_padding + padding > gradientScale)
@@ -1974,7 +1975,7 @@ namespace TMPro
                     if (m_currentMaterial.HasProperty(ShaderUtilities.ID_GradientScale))
                     {
                         float gradientScale = m_currentMaterial.GetFloat(ShaderUtilities.ID_GradientScale);
-                        style_padding = m_currentFontAsset.normalStyle / 4.0f * gradientScale * m_currentMaterial.GetFloat(ShaderUtilities.ID_ScaleRatio_A);
+                        style_padding = m_currentFontAsset.normalStyle / 4.0f * gradientScale * scaleRatioA;
 
                         // Clamp overall padding to Gradient Scale size.
                         if (style_padding + padding > gradientScale)
@@ -3331,6 +3332,13 @@ namespace TMPro
                             characterInfos[i].vertex_TL.uv2.x = PackUV(x0, y1); characterInfos[i].vertex_TL.uv2.y = xScale;
                             characterInfos[i].vertex_TR.uv2.x = PackUV(x1, y1); characterInfos[i].vertex_TR.uv2.y = xScale;
                             characterInfos[i].vertex_BR.uv2.x = PackUV(x1, y0); characterInfos[i].vertex_BR.uv2.y = xScale;
+
+                            float uv4_x = PackUV(faceDilate, outlineWidth);
+                            float uv4_y = scaleRatioA;
+                            characterInfos[i].vertex_BL.uv4.x = uv4_x; characterInfos[i].vertex_BL.uv4.y = scaleRatioA;
+                            characterInfos[i].vertex_TL.uv4.x = uv4_x; characterInfos[i].vertex_TL.uv4.y = scaleRatioA;
+                            characterInfos[i].vertex_TR.uv4.x = uv4_x; characterInfos[i].vertex_TR.uv4.y = scaleRatioA;
+                            characterInfos[i].vertex_BR.uv4.x = uv4_x; characterInfos[i].vertex_BR.uv4.y = scaleRatioA;
                             #endregion
                             break;
                         

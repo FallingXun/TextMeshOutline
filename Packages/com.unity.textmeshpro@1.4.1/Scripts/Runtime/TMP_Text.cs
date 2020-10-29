@@ -387,6 +387,23 @@ namespace TMPro
         }
         protected float m_faceDilate = 0.0f;
 
+        public float scaleRatioA
+        {
+            get
+            {
+                return m_scaleRatioA;
+            }
+            set
+            {
+                if(m_scaleRatioA == value)
+                {
+                    return;
+                }
+                m_scaleRatioA = value;
+            }
+        }
+        protected float m_scaleRatioA = 1.0f;
+
         /// <summary>
         /// The point size of the font.
         /// </summary>
