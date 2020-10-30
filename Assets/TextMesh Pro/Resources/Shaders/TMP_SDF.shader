@@ -311,8 +311,7 @@ SubShader {
 			clip(faceColor.a - 0.001);
 		#endif
 
-  		//return faceColor * input.color.a;
-  		return fixed4(input.outlineParam.y,0,0,1);
+  		return faceColor * input.color.a;
 		}
 
 		ENDCG
