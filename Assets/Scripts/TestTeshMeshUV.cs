@@ -19,4 +19,10 @@ public class TestTeshMeshUV : MonoBehaviour
         text.faceDilate = u;
         text.outlineWidth = v;
     }
+
+    [ContextMenu("ShowRadio")]
+    public void ShowRadio()
+    {
+        Debug.Log(text.scaleRatioA);
+    }
 }

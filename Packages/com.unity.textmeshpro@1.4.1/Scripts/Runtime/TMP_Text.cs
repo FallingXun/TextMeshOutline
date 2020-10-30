@@ -373,7 +373,7 @@ namespace TMPro
             {
                 return m_outlineWidth;
             }
-            set { if (m_outlineWidth == value) return; m_havePropertiesChanged = true; m_outlineWidth = value; SetOutlineThickness(value); SetVerticesDirty(); }
+            set { if (m_outlineWidth == value) return; m_havePropertiesChanged = true;  m_outlineWidth = value; SetOutlineThickness(value); SetVerticesDirty(); }
         }
         protected float m_outlineWidth = 0.0f;
 
@@ -383,7 +383,7 @@ namespace TMPro
             {
                 return m_faceDilate;
             }
-            set { if (m_faceDilate == value) return; m_havePropertiesChanged = true; m_faceDilate = value; SetOutlineThickness(value); SetVerticesDirty(); }
+            set { if (m_faceDilate == value) return; m_havePropertiesChanged = true;  m_faceDilate = value; SetOutlineThickness(value); SetVerticesDirty(); }
         }
         protected float m_faceDilate = 0.0f;
 

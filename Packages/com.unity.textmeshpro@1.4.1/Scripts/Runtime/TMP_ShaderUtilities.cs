@@ -215,7 +215,7 @@ namespace TMPro
 
 
         // Scale Ratios to ensure property ranges are optimum in Material Editor  
-        public static void UpdateShaderRatios(Material mat, TMP_Text text = null)
+        public static void UpdateShaderRatios(Material mat, TMP_Text text)
         {
             //Debug.Log("UpdateShaderRatios() called.");
 
@@ -326,7 +326,7 @@ namespace TMPro
 
 
         // Function to determine how much extra padding is required as a result of material properties like dilate, outline thickness, softness, glow, etc...
-        public static float GetPadding(Material material, bool enableExtraPadding, bool isBold, TMP_Text text = null)
+        public static float GetPadding(Material material, bool enableExtraPadding, bool isBold, TMP_Text text)
         {
             //Debug.Log("GetPadding() called.");
 

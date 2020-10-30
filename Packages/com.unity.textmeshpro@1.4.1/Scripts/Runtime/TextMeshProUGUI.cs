@@ -423,7 +423,7 @@ namespace TMPro
         /// </summary>
         public override void UpdateMeshPadding()
         {
-            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, this);
+            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, m_isUsingBold, this);
             m_isMaskingEnabled = ShaderUtilities.IsMaskingEnabled(m_sharedMaterial);
             m_havePropertiesChanged = true;
             checkPaddingRequired = false;

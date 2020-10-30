@@ -1017,7 +1017,7 @@ namespace TMPro
         {
             ShaderUtilities.GetShaderPropertyIDs();
 
-            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, this);
+            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, m_enableExtraPadding, m_isUsingBold, this);
             m_isMaskingEnabled = ShaderUtilities.IsMaskingEnabled(m_sharedMaterial);
             m_isSDFShader = m_sharedMaterial.HasProperty(ShaderUtilities.ID_WeightNormal);
 
@@ -1586,7 +1586,7 @@ namespace TMPro
                     m_previousLossyScaleY = lossyScaleY;
                 }
 
-                //if (m_hasOutlineChange == true)
+                if (m_hasOutlineChange == true)
                 {
                     UpdateOutline(m_faceDilate, m_outlineWidth, m_scaleRatioA);
                     m_hasOutlineChange = false;
@@ -3554,6 +3554,14 @@ namespace TMPro
                             characterInfos[i].vertex_TL.uv2.x = PackUV(x0, y1); characterInfos[i].vertex_TL.uv2.y = xScale;
                             characterInfos[i].vertex_TR.uv2.x = PackUV(x1, y1); characterInfos[i].vertex_TR.uv2.y = xScale;
                             characterInfos[i].vertex_BR.uv2.x = PackUV(x1, y0); characterInfos[i].vertex_BR.uv2.y = xScale;
+
+
+                            float uv4_x = PackUV(faceDilate, outlineWidth);
+                            float uv4_y = scaleRatioA;
+                            characterInfos[i].vertex_BL.uv4.x = uv4_x; characterInfos[i].vertex_BL.uv4.y = scaleRatioA;
+                            characterInfos[i].vertex_TL.uv4.x = uv4_x; characterInfos[i].vertex_TL.uv4.y = scaleRatioA;
+                            characterInfos[i].vertex_TR.uv4.x = uv4_x; characterInfos[i].vertex_TR.uv4.y = scaleRatioA;
+                            characterInfos[i].vertex_BR.uv4.x = uv4_x; characterInfos[i].vertex_BR.uv4.y = scaleRatioA;
 #if TMP_PROFILE_ON
                                 Profiler.EndSample();
 #endif

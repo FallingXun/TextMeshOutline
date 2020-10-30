@@ -184,6 +184,7 @@ SubShader {
 
 			float weight = lerp(_WeightNormal, _WeightBold, bold) / 4.0;
 			//weight = (weight + _FaceDilate) * _ScaleRatioA * 0.5;
+
 			float2 outline = UnpackUV(input.texcoord3.x);
 			weight = (weight + outline.x) * input.texcoord3.y * 0.5;
 
