@@ -1588,7 +1588,7 @@ namespace TMPro
 
                 if (m_hasOutlineChange == true)
                 {
-                    UpdateOutline(m_faceDilate, m_outlineWidth, m_scaleRatioA);
+                    UpdateOutline(faceDilate, outlineWidth, scaleRatioA, outlineColorFloat);
                     m_hasOutlineChange = false;
                 }
             }
@@ -3558,10 +3558,10 @@ namespace TMPro
 
                             float uv4_x = PackUV(faceDilate, outlineWidth);
                             float uv4_y = scaleRatioA;
-                            characterInfos[i].vertex_BL.uv4.x = uv4_x; characterInfos[i].vertex_BL.uv4.y = scaleRatioA;
-                            characterInfos[i].vertex_TL.uv4.x = uv4_x; characterInfos[i].vertex_TL.uv4.y = scaleRatioA;
-                            characterInfos[i].vertex_TR.uv4.x = uv4_x; characterInfos[i].vertex_TR.uv4.y = scaleRatioA;
-                            characterInfos[i].vertex_BR.uv4.x = uv4_x; characterInfos[i].vertex_BR.uv4.y = scaleRatioA;
+                            characterInfos[i].vertex_BL.uv4.x = uv4_x; characterInfos[i].vertex_BL.uv4.y = scaleRatioA; characterInfos[i].vertex_BL.tangent = outlineColorFloat;
+                            characterInfos[i].vertex_TL.uv4.x = uv4_x; characterInfos[i].vertex_TL.uv4.y = scaleRatioA; characterInfos[i].vertex_TL.tangent = outlineColorFloat;
+                            characterInfos[i].vertex_TR.uv4.x = uv4_x; characterInfos[i].vertex_TR.uv4.y = scaleRatioA; characterInfos[i].vertex_TR.tangent = outlineColorFloat;
+                            characterInfos[i].vertex_BR.uv4.x = uv4_x; characterInfos[i].vertex_BR.uv4.y = scaleRatioA; characterInfos[i].vertex_BR.tangent = outlineColorFloat;
 #if TMP_PROFILE_ON
                                 Profiler.EndSample();
 #endif
@@ -4308,7 +4308,7 @@ namespace TMPro
         /// <param name="faceDilate"></param>
         /// <param name="outlineWidth"></param>
         /// <param name="scaleRatioA"></param>
-        void UpdateOutline(float faceDilate, float outlineWidth, float scaleRatioA)
+        void UpdateOutline(float faceDilate, float outlineWidth, float scaleRatioA, Vector4 outlineColorFloat)
         {
             outlineWidth = Mathf.Clamp01(outlineWidth);
             faceDilate = Mathf.Clamp01(faceDilate);
@@ -4322,6 +4322,11 @@ namespace TMPro
                     meshInfo.uvs4[i].x = PackUV(faceDilate, outlineWidth);
                     meshInfo.uvs4[i].y = scaleRatioA;
                 }
+
+                for (int i = 0; i < meshInfo.tangents.Length; i++)
+                {
+                    meshInfo.tangents[i] = outlineColorFloat;
+                }
             }
 
             // Push the updated uv4 outline information to the meshes.
@@ -4330,11 +4335,13 @@ namespace TMPro
                 if (i == 0)
                 {
                     m_mesh.uv4 = m_textInfo.meshInfo[0].uvs4;
+                    m_mesh.tangents = m_textInfo.meshInfo[0].tangents;
                     m_canvasRenderer.SetMesh(m_mesh);
                 }
                 else
                 {
                     m_subTextObjects[i].mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
+                    m_subTextObjects[i].mesh.tangents = m_subTextObjects[i].mesh.tangents;
                     m_subTextObjects[i].canvasRenderer.SetMesh(m_subTextObjects[i].mesh);
                 }
             }

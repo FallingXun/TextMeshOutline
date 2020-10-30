@@ -130,6 +130,7 @@ SubShader {
 			UNITY_VERTEX_INPUT_INSTANCE_ID
 			float4	position		: POSITION;
 			float3	normal			: NORMAL;
+			float4  tangent			: TANGENT;
 			fixed4	color			: COLOR;
 			float2	texcoord0		: TEXCOORD0;
 			float2	texcoord1		: TEXCOORD1;
@@ -151,8 +152,9 @@ SubShader {
 			float4	texcoord2		: TEXCOORD4;		// u,v, scale, bias
 			fixed4	underlayColor	: COLOR1;
 		#endif
-			float4 textures			: TEXCOORD5;
+			float4  textures		: TEXCOORD5;
 			float2  outlineParam	: TEXCOORD6;
+			fixed4  outlineColor	: COLOR2;
 		};
 
 		// Used by Unity internally to handle Texture Tiling and Offset.
@@ -234,6 +236,7 @@ SubShader {
 			#endif
 			output.textures = float4(faceUV, outlineUV);
 			output.outlineParam = float2(outline.y, input.texcoord3.y);
+			output.outlineColor = input.tangent;
 			return output;
 		}
 
@@ -259,7 +262,8 @@ SubShader {
 			float softness = (_OutlineSoftness *  input.outlineParam.y) * scale;
 
 			half4 faceColor = _FaceColor;
-			half4 outlineColor = _OutlineColor;
+			//half4 outlineColor = _OutlineColor;
+			half4 outlineColor = input.outlineColor;
 
 			faceColor.rgb *= input.color.rgb;
 			

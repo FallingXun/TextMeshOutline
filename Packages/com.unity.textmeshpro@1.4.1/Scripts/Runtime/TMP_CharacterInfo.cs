@@ -12,7 +12,7 @@ namespace TMPro
         public Color32 color;
 
         //public Vector3 normal;
-        //public Vector4 tangent;
+        public Vector4 tangent;
     }
 
     /// <summary>

@@ -3335,10 +3335,11 @@ namespace TMPro
 
                             float uv4_x = PackUV(faceDilate, outlineWidth);
                             float uv4_y = scaleRatioA;
-                            characterInfos[i].vertex_BL.uv4.x = uv4_x; characterInfos[i].vertex_BL.uv4.y = scaleRatioA;
-                            characterInfos[i].vertex_TL.uv4.x = uv4_x; characterInfos[i].vertex_TL.uv4.y = scaleRatioA;
-                            characterInfos[i].vertex_TR.uv4.x = uv4_x; characterInfos[i].vertex_TR.uv4.y = scaleRatioA;
-                            characterInfos[i].vertex_BR.uv4.x = uv4_x; characterInfos[i].vertex_BR.uv4.y = scaleRatioA;
+                            characterInfos[i].vertex_BL.uv4.x = uv4_x; characterInfos[i].vertex_BL.uv4.y = scaleRatioA; characterInfos[i].vertex_BL.tangent = outlineColorFloat;
+                            characterInfos[i].vertex_TL.uv4.x = uv4_x; characterInfos[i].vertex_TL.uv4.y = scaleRatioA; characterInfos[i].vertex_TL.tangent = outlineColorFloat;
+                            characterInfos[i].vertex_TR.uv4.x = uv4_x; characterInfos[i].vertex_TR.uv4.y = scaleRatioA; characterInfos[i].vertex_TR.tangent = outlineColorFloat;
+                            characterInfos[i].vertex_BR.uv4.x = uv4_x; characterInfos[i].vertex_BR.uv4.y = scaleRatioA; characterInfos[i].vertex_BR.tangent = outlineColorFloat;
+
                             #endregion
                             break;
                         

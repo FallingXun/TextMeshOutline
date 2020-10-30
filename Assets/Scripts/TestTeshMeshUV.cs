@@ -12,12 +12,14 @@ public class TestTeshMeshUV : MonoBehaviour
 
     public float u;
     public float v;
+    public Color32 outlineColor = Color.black;
 
     [ContextMenu("Refresh")]
     public void Refresh()
     {
         text.faceDilate = u;
         text.outlineWidth = v;
+        text.outlineColorFloat = new Vector4(outlineColor.r / 255f, outlineColor.g / 255f, outlineColor.b / 255f, outlineColor.a / 255f);
     }
 
     [ContextMenu("ShowRadio")]

@@ -404,6 +404,24 @@ namespace TMPro
         }
         protected float m_scaleRatioA = 1.0f;
 
+        public Vector4 outlineColorFloat
+        {
+            get
+            {
+                return m_outlineColorFloat;
+            }
+            set
+            {
+                if (m_outlineColorFloat.Equals(value))
+                {
+                    return;
+                }
+                m_outlineColorFloat = value;
+                m_havePropertiesChanged = true;
+            }
+        }
+        protected Vector4 m_outlineColorFloat = Vector4.zero;
+
         /// <summary>
         /// The point size of the font.
         /// </summary>
