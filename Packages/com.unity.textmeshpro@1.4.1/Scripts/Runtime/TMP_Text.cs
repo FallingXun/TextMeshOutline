@@ -418,6 +418,7 @@ namespace TMPro
                 }
                 m_outlineColorFloat = value;
                 m_havePropertiesChanged = true;
+                SetVerticesDirty();
             }
         }
         protected Vector4 m_outlineColorFloat = Vector4.zero;
