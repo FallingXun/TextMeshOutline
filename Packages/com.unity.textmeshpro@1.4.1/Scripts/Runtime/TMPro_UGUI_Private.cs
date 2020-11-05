@@ -4310,8 +4310,20 @@ namespace TMPro
         /// <param name="scaleRatioA"></param>
         void UpdateOutline(float faceDilate, float outlineWidth, float scaleRatioA, Vector4 outlineColorFloat)
         {
+            if (m_textInfo == null || m_textInfo.textComponent == null)
+            {
+                return;
+            }
+            // 如果文本为空，则不处理描边信息
+            if (string.IsNullOrEmpty(m_textInfo.textComponent.text))
+            {
+                return;
+            }
+
             outlineWidth = Mathf.Clamp01(outlineWidth);
             faceDilate = Mathf.Clamp01(faceDilate);
+
+            float uv = PackUV(faceDilate, outlineWidth);
 
             for (int materialIndex = 0; materialIndex < m_textInfo.materialCount; materialIndex++)
             {
@@ -4319,7 +4331,7 @@ namespace TMPro
 
                 for (int i = 0; i < meshInfo.uvs4.Length; i++)
                 {
-                    meshInfo.uvs4[i].x = PackUV(faceDilate, outlineWidth);
+                    meshInfo.uvs4[i].x = uv;
                     meshInfo.uvs4[i].y = scaleRatioA;
                 }
 
@@ -4341,7 +4353,7 @@ namespace TMPro
                 else
                 {
                     m_subTextObjects[i].mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
-                    m_subTextObjects[i].mesh.tangents = m_subTextObjects[i].mesh.tangents;
+                    m_subTextObjects[i].mesh.tangents = m_textInfo.meshInfo[i].tangents;
                     m_subTextObjects[i].canvasRenderer.SetMesh(m_subTextObjects[i].mesh);
                 }
             }
