@@ -654,6 +654,24 @@ namespace TMPro
             color = colors32[dst_Index + 3];
             colors32[dst_Index + 3] = colors32[src_Index + 3];
             colors32[src_Index + 3] = color;
+
+            // Tangents
+            Vector4 tangent;
+            tangent = tangents[dst_Index + 0];
+            tangents[dst_Index + 0] = tangents[src_Index + 0];
+            tangents[src_Index + 0] = tangent;
+
+            tangent = tangents[dst_Index + 1];
+            tangents[dst_Index + 1] = tangents[src_Index + 1];
+            tangents[src_Index + 1] = tangent;
+
+            tangent = tangents[dst_Index + 2];
+            tangents[dst_Index + 2] = tangents[src_Index + 2];
+            tangents[src_Index + 2] = tangent;
+
+            tangent = tangents[dst_Index + 3];
+            tangents[dst_Index + 3] = tangents[src_Index + 3];
+            tangents[src_Index + 3] = tangent;
         }
 
 

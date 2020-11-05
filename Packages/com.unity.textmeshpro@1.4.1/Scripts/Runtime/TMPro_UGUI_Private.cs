@@ -1585,12 +1585,6 @@ namespace TMPro
 
                     m_previousLossyScaleY = lossyScaleY;
                 }
-
-                if (m_hasOutlineChange == true)
-                {
-                    UpdateOutline(faceDilate, outlineWidth, scaleRatioA, outlineColorFloat);
-                    m_hasOutlineChange = false;
-                }
             }
 
             // Added to handle legacy animation mode.
@@ -1661,7 +1655,6 @@ namespace TMPro
                 m_ignoreActiveState = false;
 
                 GenerateTextMesh();
-                m_hasOutlineChange = true;
             }
         }
 
@@ -4091,6 +4084,7 @@ namespace TMPro
                 m_mesh.uv2 = m_textInfo.meshInfo[0].uvs2;
                 m_mesh.uv4 = m_textInfo.meshInfo[0].uvs4;
                 m_mesh.colors32 = m_textInfo.meshInfo[0].colors32;
+                m_mesh.tangents = m_textInfo.meshInfo[0].tangents;
 
                 // Compute Bounds for the mesh. Manual computation is more efficient then using Mesh.recalcualteBounds.
                 m_mesh.RecalculateBounds();
@@ -4118,6 +4112,7 @@ namespace TMPro
                     m_subTextObjects[i].mesh.uv2 = m_textInfo.meshInfo[i].uvs2;
                     m_subTextObjects[i].mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
                     m_subTextObjects[i].mesh.colors32 = m_textInfo.meshInfo[i].colors32;
+                    m_subTextObjects[i].mesh.tangents = m_textInfo.meshInfo[i].tangents;
 
                     m_subTextObjects[i].mesh.RecalculateBounds();
 
@@ -4297,63 +4292,6 @@ namespace TMPro
                 else
                 {
                     m_subTextObjects[i].mesh.uv2 = m_textInfo.meshInfo[i].uvs2;
-                    m_subTextObjects[i].canvasRenderer.SetMesh(m_subTextObjects[i].mesh);
-                }
-            }
-        }
-
-        /// <summary>
-        ///  更新描边信息
-        /// </summary>
-        /// <param name="faceDilate"></param>
-        /// <param name="outlineWidth"></param>
-        /// <param name="scaleRatioA"></param>
-        void UpdateOutline(float faceDilate, float outlineWidth, float scaleRatioA, Vector4 outlineColorFloat)
-        {
-            if (m_textInfo == null || m_textInfo.textComponent == null)
-            {
-                return;
-            }
-            // 如果文本为空，则不处理描边信息
-            if (string.IsNullOrEmpty(m_textInfo.textComponent.text))
-            {
-                return;
-            }
-
-            outlineWidth = Mathf.Clamp01(outlineWidth);
-            faceDilate = Mathf.Clamp01(faceDilate);
-
-            float uv = PackUV(faceDilate, outlineWidth);
-
-            for (int materialIndex = 0; materialIndex < m_textInfo.materialCount; materialIndex++)
-            {
-                TMP_MeshInfo meshInfo = m_textInfo.meshInfo[materialIndex];
-
-                for (int i = 0; i < meshInfo.uvs4.Length; i++)
-                {
-                    meshInfo.uvs4[i].x = uv;
-                    meshInfo.uvs4[i].y = scaleRatioA;
-                }
-
-                for (int i = 0; i < meshInfo.tangents.Length; i++)
-                {
-                    meshInfo.tangents[i] = outlineColorFloat;
-                }
-            }
-
-            // Push the updated uv4 outline information to the meshes.
-            for (int i = 0; i < m_textInfo.materialCount; i++)
-            {
-                if (i == 0)
-                {
-                    m_mesh.uv4 = m_textInfo.meshInfo[0].uvs4;
-                    m_mesh.tangents = m_textInfo.meshInfo[0].tangents;
-                    m_canvasRenderer.SetMesh(m_mesh);
-                }
-                else
-                {
-                    m_subTextObjects[i].mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
-                    m_subTextObjects[i].mesh.tangents = m_textInfo.meshInfo[i].tangents;
                     m_subTextObjects[i].canvasRenderer.SetMesh(m_subTextObjects[i].mesh);
                 }
             }

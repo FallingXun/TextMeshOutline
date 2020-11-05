@@ -490,6 +490,12 @@ namespace TMPro.Examples
             dst_colors[vertexIndex + 2] = src_colors[vertexIndex + 2];
             dst_colors[vertexIndex + 3] = src_colors[vertexIndex + 3];
 
+            // Restore Vertex Tangents
+            Vector4[] dst_tangents = m_TextMeshPro.textInfo.meshInfo[materialIndex].tangents;
+
+            Vector4[] src_tangents = m_cachedMeshInfoVertexData[materialIndex].tangents;
+
+
             // Restore UV0S
             // UVS0
             Vector2[] src_uv0s = m_cachedMeshInfoVertexData[materialIndex].uvs0;
@@ -532,6 +538,14 @@ namespace TMPro.Examples
             dst_colors[lastIndex + 1] = src_colors[lastIndex + 1];
             dst_colors[lastIndex + 2] = src_colors[lastIndex + 2];
             dst_colors[lastIndex + 3] = src_colors[lastIndex + 3];
+
+            // Tangents 
+            src_tangents = m_cachedMeshInfoVertexData[materialIndex].tangents;
+            dst_tangents = m_TextMeshPro.textInfo.meshInfo[materialIndex].tangents;
+            dst_tangents[lastIndex + 0] = src_tangents[lastIndex + 0];
+            dst_tangents[lastIndex + 1] = src_tangents[lastIndex + 1];
+            dst_tangents[lastIndex + 2] = src_tangents[lastIndex + 2];
+            dst_tangents[lastIndex + 3] = src_tangents[lastIndex + 3];
 
             // UVS0
             src_uv0s = m_cachedMeshInfoVertexData[materialIndex].uvs0;

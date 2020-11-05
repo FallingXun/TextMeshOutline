@@ -363,7 +363,6 @@ namespace TMPro
         [SerializeField]
         protected Color32 m_outlineColor = Color.black;
 
-        protected bool m_hasOutlineChange = false;
         /// <summary>
         /// Sets the thickness of the outline of the font. Setting this value will result in an instance of the material.
         /// </summary>
@@ -5105,6 +5104,12 @@ namespace TMPro
             m_textInfo.meshInfo[materialIndex].colors32[2 + index_X4] = characterInfoArray[i].vertex_TR.color;
             m_textInfo.meshInfo[materialIndex].colors32[3 + index_X4] = characterInfoArray[i].vertex_BR.color;
 
+            // steup Tangents
+            m_textInfo.meshInfo[materialIndex].tangents[0 + index_X4] = characterInfoArray[i].vertex_BL.tangent;
+            m_textInfo.meshInfo[materialIndex].tangents[1 + index_X4] = characterInfoArray[i].vertex_TL.tangent;
+            m_textInfo.meshInfo[materialIndex].tangents[2 + index_X4] = characterInfoArray[i].vertex_TR.tangent;
+            m_textInfo.meshInfo[materialIndex].tangents[3 + index_X4] = characterInfoArray[i].vertex_BR.tangent;
+
             m_textInfo.meshInfo[materialIndex].vertexCount = index_X4 + 4;
         }
 
@@ -5168,6 +5173,14 @@ namespace TMPro
             m_textInfo.meshInfo[materialIndex].uvs4[2 + index_X4] = characterInfoArray[i].vertex_TR.uv4;
             m_textInfo.meshInfo[materialIndex].uvs4[3 + index_X4] = characterInfoArray[i].vertex_BR.uv4;
 
+            if (isVolumetric)
+            {
+                m_textInfo.meshInfo[materialIndex].uvs4[4 + index_X4] = characterInfoArray[i].vertex_BL.uv4;
+                m_textInfo.meshInfo[materialIndex].uvs4[5 + index_X4] = characterInfoArray[i].vertex_TL.uv4;
+                m_textInfo.meshInfo[materialIndex].uvs4[6 + index_X4] = characterInfoArray[i].vertex_TR.uv4;
+                m_textInfo.meshInfo[materialIndex].uvs4[7 + index_X4] = characterInfoArray[i].vertex_BR.uv4;
+            }
+
 
             // setup Vertex Colors
             m_textInfo.meshInfo[materialIndex].colors32[0 + index_X4] = characterInfoArray[i].vertex_BL.color;
@@ -5182,6 +5195,22 @@ namespace TMPro
                 m_textInfo.meshInfo[materialIndex].colors32[5 + index_X4] = backColor; //characterInfoArray[i].vertex_TL.color;
                 m_textInfo.meshInfo[materialIndex].colors32[6 + index_X4] = backColor; //characterInfoArray[i].vertex_TR.color;
                 m_textInfo.meshInfo[materialIndex].colors32[7 + index_X4] = backColor; //characterInfoArray[i].vertex_BR.color;
+            }
+
+
+            // Setup Tangents
+            m_textInfo.meshInfo[materialIndex].tangents[0 + index_X4] = characterInfoArray[i].vertex_BL.tangent;
+            m_textInfo.meshInfo[materialIndex].tangents[1 + index_X4] = characterInfoArray[i].vertex_TL.tangent;
+            m_textInfo.meshInfo[materialIndex].tangents[2 + index_X4] = characterInfoArray[i].vertex_TR.tangent;
+            m_textInfo.meshInfo[materialIndex].tangents[3 + index_X4] = characterInfoArray[i].vertex_BR.tangent;
+
+            // 体积的tangents可能有其他用途
+            if (isVolumetric)
+            {
+                m_textInfo.meshInfo[materialIndex].tangents[4 + index_X4] = characterInfoArray[i].vertex_BL.tangent;
+                m_textInfo.meshInfo[materialIndex].tangents[5 + index_X4] = characterInfoArray[i].vertex_TL.tangent;
+                m_textInfo.meshInfo[materialIndex].tangents[6 + index_X4] = characterInfoArray[i].vertex_TR.tangent;
+                m_textInfo.meshInfo[materialIndex].tangents[7 + index_X4] = characterInfoArray[i].vertex_BR.tangent;
             }
 
             m_textInfo.meshInfo[materialIndex].vertexCount = index_X4 + (!isVolumetric ? 4 : 8);
@@ -5234,6 +5263,12 @@ namespace TMPro
             m_textInfo.meshInfo[materialIndex].colors32[1 + index_X4] = characterInfoArray[i].vertex_TL.color;
             m_textInfo.meshInfo[materialIndex].colors32[2 + index_X4] = characterInfoArray[i].vertex_TR.color;
             m_textInfo.meshInfo[materialIndex].colors32[3 + index_X4] = characterInfoArray[i].vertex_BR.color;
+
+            // setup Tangents
+            m_textInfo.meshInfo[materialIndex].tangents[0 + index_X4] = characterInfoArray[i].vertex_BL.tangent;
+            m_textInfo.meshInfo[materialIndex].tangents[1 + index_X4] = characterInfoArray[i].vertex_TL.tangent;
+            m_textInfo.meshInfo[materialIndex].tangents[2 + index_X4] = characterInfoArray[i].vertex_TR.tangent;
+            m_textInfo.meshInfo[materialIndex].tangents[3 + index_X4] = characterInfoArray[i].vertex_BR.tangent;
 
             m_textInfo.meshInfo[materialIndex].vertexCount = index_X4 + 4;
         }
