@@ -403,24 +403,103 @@ namespace TMPro
         }
         protected float m_scaleRatioA = 1.0f;
 
-        public Vector4 outlineColorFloat
+        #region 投影
+        public float underlayDilate
         {
             get
             {
-                return m_outlineColorFloat;
+                return m_underlayDilate;
             }
             set
             {
-                if (m_outlineColorFloat.Equals(value))
+                if(m_underlayDilate == value)
                 {
                     return;
                 }
-                m_outlineColorFloat = value;
+                m_havePropertiesChanged = true;
+                m_underlayDilate = value;
+                SetOutlineThickness(value);
+                SetVerticesDirty();
+            }
+        }
+        protected float m_underlayDilate = 0f;
+
+        public float underlayOffsetX
+        {
+            get
+            {
+                return m_underlayOffsetX;
+            }
+            set
+            {
+                if(m_underlayOffsetX == value)
+                {
+                    return;
+                }
+                m_havePropertiesChanged = true;
+                m_underlayOffsetX = value;
+                SetOutlineThickness(value);
+                SetVerticesDirty();
+            }
+        }
+        protected float m_underlayOffsetX = 0f;
+
+        public float underlayOffsetY
+        {
+            get
+            {
+                return m_underlayOffsetY;
+            }
+            set
+            {
+                if (m_underlayOffsetY == value)
+                {
+                    return;
+                }
+                m_havePropertiesChanged = true;
+                m_underlayOffsetY = value;
+                SetOutlineThickness(value);
+                SetVerticesDirty();
+            }
+        }
+        protected float m_underlayOffsetY = 0f;
+
+        public float scaleRatioC
+        {
+            get
+            {
+                return m_scaleRatioC;
+            }
+            set
+            {
+                if (m_scaleRatioC == value)
+                {
+                    return;
+                }
+                m_scaleRatioC = value;
+            }
+        }
+        protected float m_scaleRatioC = 1.0f;
+        #endregion
+
+        public Vector4 effectColorFloat
+        {
+            get
+            {
+                return m_effectColorFloat;
+            }
+            set
+            {
+                if (m_effectColorFloat.Equals(value))
+                {
+                    return;
+                }
+                m_effectColorFloat = value;
                 m_havePropertiesChanged = true;
                 SetVerticesDirty();
             }
         }
-        protected Vector4 m_outlineColorFloat = Vector4.zero;
+        protected Vector4 m_effectColorFloat = Vector4.zero;
 
         /// <summary>
         /// The point size of the font.
@@ -5090,6 +5169,11 @@ namespace TMPro
             m_textInfo.meshInfo[materialIndex].uvs2[2 + index_X4] = characterInfoArray[i].vertex_TR.uv2;
             m_textInfo.meshInfo[materialIndex].uvs2[3 + index_X4] = characterInfoArray[i].vertex_BR.uv2;
 
+            // Setup UVS3
+            m_textInfo.meshInfo[materialIndex].uvs3[0 + index_X4] = characterInfoArray[i].vertex_BL.uv3;
+            m_textInfo.meshInfo[materialIndex].uvs3[1 + index_X4] = characterInfoArray[i].vertex_TL.uv3;
+            m_textInfo.meshInfo[materialIndex].uvs3[2 + index_X4] = characterInfoArray[i].vertex_TR.uv3;
+            m_textInfo.meshInfo[materialIndex].uvs3[3 + index_X4] = characterInfoArray[i].vertex_BR.uv3;
 
             // Setup UVS4
             m_textInfo.meshInfo[materialIndex].uvs4[0 + index_X4] = characterInfoArray[i].vertex_BL.uv4;
@@ -5166,6 +5250,19 @@ namespace TMPro
                 m_textInfo.meshInfo[materialIndex].uvs2[7 + index_X4] = characterInfoArray[i].vertex_BR.uv2;
             }
 
+            // Setup UVS3
+            m_textInfo.meshInfo[materialIndex].uvs3[0 + index_X4] = characterInfoArray[i].vertex_BL.uv3;
+            m_textInfo.meshInfo[materialIndex].uvs3[1 + index_X4] = characterInfoArray[i].vertex_TL.uv3;
+            m_textInfo.meshInfo[materialIndex].uvs3[2 + index_X4] = characterInfoArray[i].vertex_TR.uv3;
+            m_textInfo.meshInfo[materialIndex].uvs3[3 + index_X4] = characterInfoArray[i].vertex_BR.uv3;
+
+            if (isVolumetric)
+            {
+                m_textInfo.meshInfo[materialIndex].uvs3[4 + index_X4] = characterInfoArray[i].vertex_BL.uv3;
+                m_textInfo.meshInfo[materialIndex].uvs3[5 + index_X4] = characterInfoArray[i].vertex_TL.uv3;
+                m_textInfo.meshInfo[materialIndex].uvs3[6 + index_X4] = characterInfoArray[i].vertex_TR.uv3;
+                m_textInfo.meshInfo[materialIndex].uvs3[7 + index_X4] = characterInfoArray[i].vertex_BR.uv3;
+            }
 
             // Setup UVS4
             m_textInfo.meshInfo[materialIndex].uvs4[0 + index_X4] = characterInfoArray[i].vertex_BL.uv4;
@@ -5250,6 +5347,11 @@ namespace TMPro
             m_textInfo.meshInfo[materialIndex].uvs2[2 + index_X4] = characterInfoArray[i].vertex_TR.uv2;
             m_textInfo.meshInfo[materialIndex].uvs2[3 + index_X4] = characterInfoArray[i].vertex_BR.uv2;
 
+            // Setup UVS3
+            m_textInfo.meshInfo[materialIndex].uvs3[0 + index_X4] = characterInfoArray[i].vertex_BL.uv3;
+            m_textInfo.meshInfo[materialIndex].uvs3[1 + index_X4] = characterInfoArray[i].vertex_TL.uv3;
+            m_textInfo.meshInfo[materialIndex].uvs3[2 + index_X4] = characterInfoArray[i].vertex_TR.uv3;
+            m_textInfo.meshInfo[materialIndex].uvs3[3 + index_X4] = characterInfoArray[i].vertex_BR.uv3;
 
             // Setup UVS4
             m_textInfo.meshInfo[materialIndex].uvs4[0 + index_X4] = characterInfoArray[i].vertex_BL.uv4;

@@ -134,6 +134,7 @@ SubShader {
 			fixed4	color			: COLOR;
 			float2	texcoord0		: TEXCOORD0;
 			float2	texcoord1		: TEXCOORD1;
+			float2	texcoord2		: TEXCOORD2;
 			float2	texcoord3		: TEXCOORD3;
 		};
 
@@ -202,15 +203,25 @@ SubShader {
 			alphaClip = alphaClip / 2.0 - ( .5 / scale) - weight;
 
 		#if (UNDERLAY_ON || UNDERLAY_INNER)
-			float4 underlayColor = _UnderlayColor;
+			//float4 underlayColor = _UnderlayColor;
+			float4 underlayColor = input.tangent;
 			underlayColor.rgb *= underlayColor.a;
 
-			float bScale = scale;
-			bScale /= 1 + ((_UnderlaySoftness*_ScaleRatioC) * bScale);
-			float bBias = (0.5 - weight) * bScale - 0.5 - ((_UnderlayDilate * _ScaleRatioC) * 0.5 * bScale);
+			// underlayOffsetX,underlayOffsetY
+			float2 uv2_x = UnpackUV(input.texcoord2.x);
+			// underlayDilate,scaleRatioC
+			float2 uv2_y = UnpackUV(input.texcoord2.y);
 
-			float x = -(_UnderlayOffsetX * _ScaleRatioC) * _GradientScale / _TextureWidth;
-			float y = -(_UnderlayOffsetY * _ScaleRatioC) * _GradientScale / _TextureHeight;
+			float bScale = scale;
+			//bScale /= 1 + ((_UnderlaySoftness*_ScaleRatioC) * bScale);
+			bScale /= 1 + ((_UnderlaySoftness*uv2_y.y) * bScale);
+			//float bBias = (0.5 - weight) * bScale - 0.5 - ((_UnderlayDilate * _ScaleRatioC) * 0.5 * bScale);
+			float bBias = (0.5 - weight) * bScale - 0.5 - ((uv2_y.x * uv2_y.y) * 0.5 * bScale);
+
+			//float x = -(_UnderlayOffsetX * _ScaleRatioC) * _GradientScale / _TextureWidth;
+			float x = -(uv2_x.x * uv2_y.y) * _GradientScale / _TextureWidth;
+			//float y = -(_UnderlayOffsetY * _ScaleRatioC) * _GradientScale / _TextureHeight;
+			float y = (uv2_x.y * uv2_y.y) * _GradientScale / _TextureHeight;
 			float2 bOffset = float2(x, y);
 		#endif
 

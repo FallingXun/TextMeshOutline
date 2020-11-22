@@ -268,11 +268,14 @@ namespace TMPro
             }
 
             // Compute Ratio C
-            if (mat.HasProperty(ID_UnderlayOffsetX))
+            //if (mat.HasProperty(ID_UnderlayOffsetX))
             {
-                float underlayOffsetX = mat.GetFloat(ID_UnderlayOffsetX);
-                float underlayOffsetY = mat.GetFloat(ID_UnderlayOffsetY);
-                float underlayDilate = mat.GetFloat(ID_UnderlayDilate);
+                //float underlayOffsetX = mat.GetFloat(ID_UnderlayOffsetX);
+                float underlayOffsetX = text == null ? 0f : text.underlayOffsetX;
+                //float underlayOffsetY = mat.GetFloat(ID_UnderlayOffsetY);
+                float underlayOffsetY = text == null ? 0f : text.underlayOffsetY;
+                //float underlayDilate = mat.GetFloat(ID_UnderlayDilate);
+                float underlayDilate = text == null ? 0f : text.underlayDilate;
                 float underlaySoftness = mat.GetFloat(ID_UnderlaySoftness);
 
                 float range = (weight + faceDilate) * (scale - m_clamp);
@@ -284,7 +287,11 @@ namespace TMPro
 
                 // Only set the ratio if it has changed.
                 //if (ratio_C != ratio_C_old)
-                mat.SetFloat(ID_ScaleRatio_C, ratio_C);
+                //mat.SetFloat(ID_ScaleRatio_C, ratio_C);
+                if (text != null)
+                {
+                    text.scaleRatioC = ratio_C;
+                }
             }
         }
 
@@ -402,14 +409,21 @@ namespace TMPro
             uniformPadding = Mathf.Max(uniformPadding, faceDilate + glowOffset + glowOuter);
 
             // Underlay padding contribution
-            if (material.HasProperty(ID_UnderlaySoftness) && shaderKeywords.Contains(Keyword_Underlay)) // Generates GC
+            //if (material.HasProperty(ID_UnderlaySoftness) /*&& shaderKeywords.Contains(Keyword_Underlay)*/) // Generates GC
             {
-                if (material.HasProperty(ID_ScaleRatio_C))
-                    scaleRatio_C = material.GetFloat(ID_ScaleRatio_C);
+                //if (material.HasProperty(ID_ScaleRatio_C))
+                //    scaleRatio_C = material.GetFloat(ID_ScaleRatio_C);
+                scaleRatio_C = text == null ? 1f : text.scaleRatioC;
 
-                float offsetX = material.GetFloat(ID_UnderlayOffsetX) * scaleRatio_C;
-                float offsetY = material.GetFloat(ID_UnderlayOffsetY) * scaleRatio_C;
-                float dilate = material.GetFloat(ID_UnderlayDilate) * scaleRatio_C;
+                float underOffsetX = text == null ? 0f : text.underlayOffsetX;
+                float underOffsetY = text == null ? 0f : text.underlayOffsetY;
+                float underDilate = text == null ? 0f : text.underlayDilate;
+                //float offsetX = material.GetFloat(ID_UnderlayOffsetX) * scaleRatio_C;
+                //float offsetY = material.GetFloat(ID_UnderlayOffsetY) * scaleRatio_C;
+                //float dilate = material.GetFloat(ID_UnderlayDilate) * scaleRatio_C;
+                float offsetX = underOffsetX * scaleRatio_C;
+                float offsetY = underOffsetY * scaleRatio_C;
+                float dilate = underDilate * scaleRatio_C;
                 float softness = material.GetFloat(ID_UnderlaySoftness) * scaleRatio_C;
 
                 padding.x = Mathf.Max(padding.x, faceDilate + dilate + softness - offsetX);
@@ -521,14 +535,21 @@ namespace TMPro
                 uniformPadding = Mathf.Max(uniformPadding, faceDilate + glowOffset + glowOuter);
 
                 // Underlay padding contribution
-                if (materials[i].HasProperty(ShaderUtilities.ID_UnderlaySoftness) && shaderKeywords.Contains(ShaderUtilities.Keyword_Underlay))
+                if (materials[i].HasProperty(ShaderUtilities.ID_UnderlaySoftness) /*&& shaderKeywords.Contains(ShaderUtilities.Keyword_Underlay)*/)
                 {
-                    if (materials[i].HasProperty(ShaderUtilities.ID_ScaleRatio_C))
-                        scaleRatio_C = materials[i].GetFloat(ShaderUtilities.ID_ScaleRatio_C);
+                    //if (materials[i].HasProperty(ShaderUtilities.ID_ScaleRatio_C))
+                    //    scaleRatio_C = materials[i].GetFloat(ShaderUtilities.ID_ScaleRatio_C);
+                    scaleRatio_C = text == null ? 1f : text.scaleRatioC;
 
-                    float offsetX = materials[i].GetFloat(ShaderUtilities.ID_UnderlayOffsetX) * scaleRatio_C;
-                    float offsetY = materials[i].GetFloat(ShaderUtilities.ID_UnderlayOffsetY) * scaleRatio_C;
-                    float dilate = materials[i].GetFloat(ShaderUtilities.ID_UnderlayDilate) * scaleRatio_C;
+                    float underOffsetX = text == null ? 0f : text.underlayOffsetX;
+                    float underOffsetY = text == null ? 0f : text.underlayOffsetY;
+                    float underDilate = text == null ? 0f : text.underlayDilate;
+                    //float offsetX = materials[i].GetFloat(ShaderUtilities.ID_UnderlayOffsetX) * scaleRatio_C;
+                    //float offsetY = materials[i].GetFloat(ShaderUtilities.ID_UnderlayOffsetY) * scaleRatio_C;
+                    //float dilate = materials[i].GetFloat(ShaderUtilities.ID_UnderlayDilate) * scaleRatio_C;
+                    float offsetX = underOffsetX * scaleRatio_C;
+                    float offsetY = underOffsetY * scaleRatio_C;
+                    float dilate = underDilate * scaleRatio_C;
                     float softness = materials[i].GetFloat(ShaderUtilities.ID_UnderlaySoftness) * scaleRatio_C;
 
                     padding.x = Mathf.Max(padding.x, faceDilate + dilate + softness - offsetX);

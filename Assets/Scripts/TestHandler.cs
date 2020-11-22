@@ -69,7 +69,7 @@ public class TestHandler : MonoBehaviour
             float v = Random.Range(0f, 1f);
             tests[i].text.faceDilate = u;
             tests[i].text.outlineWidth = v;
-            tests[i].text.outlineColorFloat = new Vector4(u, v, u, 1f);
+            tests[i].text.effectColorFloat = new Vector4(u, v, u, 1f);
         }
     }
 }

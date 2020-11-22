@@ -399,6 +399,7 @@ namespace TMPro
 
                 if ((flags & TMP_VertexDataUpdateFlags.Uv4) == TMP_VertexDataUpdateFlags.Uv4)
                 {
+                    mesh.uv3 = m_textInfo.meshInfo[i].uvs3;
                     mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
                     mesh.tangents = m_textInfo.meshInfo[i].tangents;
                 }
@@ -437,6 +438,7 @@ namespace TMPro
                 mesh.vertices = m_textInfo.meshInfo[i].vertices;
                 mesh.uv = m_textInfo.meshInfo[i].uvs0;
                 mesh.uv2 = m_textInfo.meshInfo[i].uvs2;
+                mesh.uv3 = m_textInfo.meshInfo[i].uvs3;
                 mesh.uv4 = m_textInfo.meshInfo[i].uvs4;
                 mesh.colors32 = m_textInfo.meshInfo[i].colors32;
                 mesh.tangents = m_textInfo.meshInfo[i].tangents;

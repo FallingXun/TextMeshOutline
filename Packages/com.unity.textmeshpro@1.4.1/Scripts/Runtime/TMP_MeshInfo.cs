@@ -28,6 +28,7 @@ namespace TMPro
 
         public Vector2[] uvs0;
         public Vector2[] uvs2;
+        public Vector2[] uvs3;
         public Vector2[] uvs4;
         public Color32[] colors32;
         public int[] triangles;
@@ -62,6 +63,7 @@ namespace TMPro
             this.vertices = new Vector3[sizeX4];
             this.uvs0 = new Vector2[sizeX4];
             this.uvs2 = new Vector2[sizeX4];
+            this.uvs3 = new Vector2[sizeX4];
             this.uvs4 = new Vector2[sizeX4];
             this.colors32 = new Color32[sizeX4];
 
@@ -79,6 +81,7 @@ namespace TMPro
                     this.vertices[index_X4 + i] = Vector3.zero;
                     this.uvs0[index_X4 + i] = Vector2.zero;
                     this.uvs2[index_X4 + i] = Vector2.zero;
+                    this.uvs3[index_X4 + i] = Vector2.zero;
                     this.uvs4[index_X4 + i] = Vector2.zero;
                     this.colors32[index_X4 + i] = s_DefaultColor;
                     this.normals[index_X4 + i] = s_DefaultNormal;
@@ -138,6 +141,7 @@ namespace TMPro
             this.vertices = new Vector3[size_x_s0];
             this.uvs0 = new Vector2[size_x_s0];
             this.uvs2 = new Vector2[size_x_s0];
+            this.uvs3 = new Vector2[size_x_s0];
             this.uvs4 = new Vector2[size_x_s0]; 
             this.colors32 = new Color32[size_x_s0];
 
@@ -155,6 +159,7 @@ namespace TMPro
                     this.vertices[index_x_s0 + i] = Vector3.zero;
                     this.uvs0[index_x_s0 + i] = Vector2.zero;
                     this.uvs2[index_x_s0 + i] = Vector2.zero;
+                    this.uvs3[index_x_s0 + i] = Vector2.zero;
                     this.uvs4[index_x_s0 + i] = Vector2.zero;
                     this.colors32[index_x_s0 + i] = s_DefaultColor;
                     this.normals[index_x_s0 + i] = s_DefaultNormal;
@@ -246,6 +251,7 @@ namespace TMPro
 
             Array.Resize(ref this.uvs0, size_X4);
             Array.Resize(ref this.uvs2, size_X4);
+            Array.Resize(ref this.uvs3, size_X4);
             Array.Resize(ref this.uvs4, size_X4);
 
             Array.Resize(ref this.colors32, size_X4);
@@ -319,6 +325,7 @@ namespace TMPro
 
             Array.Resize(ref this.uvs0, size_X4);
             Array.Resize(ref this.uvs2, size_X4);
+            Array.Resize(ref this.uvs3, size_X4);
             Array.Resize(ref this.uvs4, size_X4);
 
             Array.Resize(ref this.colors32, size_X4);
@@ -619,6 +626,22 @@ namespace TMPro
             uvs2[dst_Index + 3] = uvs2[src_Index + 3];
             uvs2[src_Index + 3] = uvs;
 
+            // Swap UVs3
+            uvs = uvs3[dst_Index + 0];
+            uvs3[dst_Index + 0] = uvs3[src_Index + 0];
+            uvs3[src_Index + 0] = uvs;
+
+            uvs = uvs3[dst_Index + 1];
+            uvs3[dst_Index + 1] = uvs3[src_Index + 1];
+            uvs3[src_Index + 1] = uvs;
+
+            uvs = uvs3[dst_Index + 2];
+            uvs3[dst_Index + 2] = uvs3[src_Index + 2];
+            uvs3[src_Index + 2] = uvs;
+
+            uvs = uvs3[dst_Index + 3];
+            uvs3[dst_Index + 3] = uvs3[src_Index + 3];
+            uvs3[src_Index + 3] = uvs;
 
             // Swap UVs4
             uvs = uvs4[dst_Index + 0];

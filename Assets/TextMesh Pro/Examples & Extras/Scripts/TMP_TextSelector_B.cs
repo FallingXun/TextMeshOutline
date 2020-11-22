@@ -513,6 +513,13 @@ namespace TMPro.Examples
             dst_uv2s[vertexIndex + 2] = src_uv2s[vertexIndex + 2];
             dst_uv2s[vertexIndex + 3] = src_uv2s[vertexIndex + 3];
 
+            // UVS3
+            Vector2[] src_uv3s = m_cachedMeshInfoVertexData[materialIndex].uvs3;
+            Vector2[] dst_uv3s = m_TextMeshPro.textInfo.meshInfo[materialIndex].uvs3;
+            dst_uv3s[vertexIndex + 0] = src_uv3s[vertexIndex + 0];
+            dst_uv3s[vertexIndex + 1] = src_uv3s[vertexIndex + 1];
+            dst_uv3s[vertexIndex + 2] = src_uv3s[vertexIndex + 2];
+            dst_uv3s[vertexIndex + 3] = src_uv3s[vertexIndex + 3];
 
             // UVS4
             Vector2[] src_uv4s = m_cachedMeshInfoVertexData[materialIndex].uvs4;
@@ -562,6 +569,14 @@ namespace TMPro.Examples
             dst_uv2s[lastIndex + 1] = src_uv2s[lastIndex + 1];
             dst_uv2s[lastIndex + 2] = src_uv2s[lastIndex + 2];
             dst_uv2s[lastIndex + 3] = src_uv2s[lastIndex + 3];
+
+            // UVS3
+            src_uv3s = m_cachedMeshInfoVertexData[materialIndex].uvs3;
+            dst_uv3s = m_TextMeshPro.textInfo.meshInfo[materialIndex].uvs3;
+            dst_uv3s[lastIndex + 0] = src_uv3s[lastIndex + 0];
+            dst_uv3s[lastIndex + 1] = src_uv3s[lastIndex + 1];
+            dst_uv3s[lastIndex + 2] = src_uv3s[lastIndex + 2];
+            dst_uv3s[lastIndex + 3] = src_uv3s[lastIndex + 3];
 
             // UVS4
             src_uv4s = m_cachedMeshInfoVertexData[materialIndex].uvs4;

@@ -7,24 +7,35 @@ using UnityEngine.UI;
 public class TestTeshMeshUV : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    public CanvasRenderer m_canvasRenderer;
-    public Canvas canvas;
 
-    public float u;
-    public float v;
-    public Color32 outlineColor = Color.black;
+    public float faceDilate;
+    public float outlineWidth;
+    public Color32 effectColor = Color.black;
+
+    public float underlayOffsetX = 0f;
+    public float underlayOffsetY = 0f;
+    public float underlayDilate = 0f;
 
     [ContextMenu("Refresh")]
     public void Refresh()
     {
-        text.faceDilate = u;
-        text.outlineWidth = v;
-        text.outlineColorFloat = new Vector4(outlineColor.r / 255f, outlineColor.g / 255f, outlineColor.b / 255f, outlineColor.a / 255f);
+        text.faceDilate = faceDilate;
+        text.outlineWidth = outlineWidth;
+        text.underlayOffsetX = underlayOffsetX;
+        text.underlayOffsetY = underlayOffsetY;
+        text.underlayDilate = underlayDilate;
+
+        text.effectColorFloat = new Vector4(effectColor.r / 255f, effectColor.g / 255f, effectColor.b / 255f, effectColor.a / 255f);
     }
 
     [ContextMenu("ShowRadio")]
     public void ShowRadio()
     {
         Debug.Log(text.scaleRatioA);
+    }
+
+    private void OnValidate()
+    {
+        Refresh();
     }
 }
