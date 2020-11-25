@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -275,13 +275,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1133576}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1133578
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -532,13 +533,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 5873457}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &5873459
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -710,13 +712,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 21202688}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &21202690
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -888,13 +891,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 30219539}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &30219541
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1066,13 +1070,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 32481678}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &32481680
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1244,13 +1249,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 40979535}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &40979537
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1422,13 +1428,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 52285451}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &52285453
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1600,13 +1607,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 59626598}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &59626600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1778,13 +1786,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 86281388}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &86281390
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1964,13 +1973,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 89700488}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.4
-  v: 0.57
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4282287294
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!1 &89951699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2134,13 +2144,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 89951701}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &89951703
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2312,13 +2323,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 96939553}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &96939555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2490,13 +2502,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 106742602}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &106742604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2668,13 +2681,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 120575909}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &120575911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2846,13 +2860,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 122208868}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &122208870
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3024,13 +3039,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 123916919}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &123916921
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3202,13 +3218,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 133324423}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &133324425
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3380,13 +3397,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 136213163}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &136213165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3558,13 +3576,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 141819208}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &141819210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3835,13 +3854,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 175210812}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &175210814
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4013,13 +4033,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 204867901}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &204867903
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4191,13 +4212,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 230317921}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &230317923
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4369,13 +4391,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 235646921}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &235646923
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4665,13 +4688,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 241147970}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &241147972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4843,13 +4867,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 248563660}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &248563662
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5021,13 +5046,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 252481735}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &252481737
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5199,13 +5225,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 257218397}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &257218399
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5377,13 +5404,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 269537109}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &269537111
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5555,13 +5583,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 277185342}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &277185344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5733,13 +5762,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 280892967}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &280892969
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5911,13 +5941,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 289203772}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &289203774
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6089,13 +6120,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 292615016}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &292615018
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6267,13 +6299,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 292925857}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &292925859
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6445,13 +6478,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 295103041}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &295103043
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6623,13 +6657,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 305359707}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &305359709
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6880,13 +6915,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 306496057}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.67
-  v: 0.7
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 3204448256
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &306496059
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7058,13 +7094,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 310517673}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &310517675
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7236,13 +7273,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 314525871}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &314525873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7414,13 +7452,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 315462689}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &315462691
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7592,13 +7631,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 337626555}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &337626557
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7770,13 +7810,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 365218636}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &365218638
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7948,13 +7989,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 373940797}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 1
-  v: 1
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4292020977
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &373940799
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8126,13 +8168,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 374196732}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &374196734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8304,13 +8347,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 375029713}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &375029715
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8482,13 +8526,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 386092036}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &386092038
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8660,13 +8705,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 386926330}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &386926332
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8838,13 +8884,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 400600047}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &400600049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9016,13 +9063,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 407704036}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &407704038
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9194,13 +9242,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 412972853}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &412972855
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9372,13 +9421,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 417462579}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &417462581
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9550,13 +9600,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 418429047}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &418429049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9728,13 +9779,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 421579415}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &421579417
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9906,13 +9958,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 428141702}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &428141704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10084,13 +10137,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 433896635}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &433896637
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10262,13 +10316,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 441870124}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &441870126
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10440,13 +10495,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 450436599}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &450436601
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10618,13 +10674,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 457762077}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &457762079
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10796,13 +10853,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 461365419}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &461365421
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10974,13 +11032,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 464461565}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &464461567
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11152,13 +11211,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 486637861}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &486637863
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11330,13 +11390,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 495456433}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &495456435
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11587,13 +11648,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 504250697}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &504250699
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11765,13 +11827,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 505167794}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &505167796
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11943,13 +12006,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 507078320}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &507078322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12121,13 +12185,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 509946105}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &509946107
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12299,13 +12364,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 512230679}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &512230681
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12477,13 +12543,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 512452302}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &512452304
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12655,13 +12722,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 516019735}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &516019737
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12833,13 +12901,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 520290831}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &520290833
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13011,13 +13080,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 522275273}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &522275275
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13271,13 +13341,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 535185730}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &535185732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13449,13 +13520,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 538072152}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &538072154
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13627,13 +13699,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 556537676}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &556537678
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13805,13 +13878,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 562117720}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &562117722
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13983,13 +14057,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 582231288}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &582231290
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14161,13 +14236,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 590919404}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &590919406
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14339,13 +14415,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 592509065}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &592509067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14517,13 +14594,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 599093287}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &599093289
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14695,13 +14773,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 601137070}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &601137072
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14873,13 +14952,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 608011683}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &608011685
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15051,13 +15131,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 618040577}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &618040579
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15229,13 +15310,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 622395822}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &622395824
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15407,13 +15489,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 625915199}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &625915201
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15585,13 +15668,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 632506785}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &632506787
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15763,13 +15847,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 634013756}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &634013758
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15941,13 +16026,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 644447965}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &644447967
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16119,13 +16205,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 645777601}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &645777603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16297,13 +16384,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 649338307}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &649338309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16475,13 +16563,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 660115891}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &660115893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16653,13 +16742,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 663725437}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &663725439
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16831,13 +16921,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 664050934}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &664050936
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17009,13 +17100,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 668857503}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &668857505
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17651,13 +17743,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 681211955}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &681211957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17829,13 +17922,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 683308640}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &683308642
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18007,13 +18101,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 684420909}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &684420911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18185,13 +18280,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 688801972}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &688801974
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18363,13 +18459,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 692593347}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &692593349
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18541,13 +18638,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 692923734}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &692923736
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18719,13 +18817,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 694731689}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &694731691
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18897,13 +18996,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 696079397}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &696079399
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19075,13 +19175,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 697187754}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &697187756
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19253,13 +19354,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 700810871}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &700810873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19431,13 +19533,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 720837963}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &720837965
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19609,13 +19712,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 733139070}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &733139072
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19787,13 +19891,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 737221562}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &737221564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20110,13 +20215,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 752588993}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &752588995
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20288,13 +20394,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 763743923}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &763743925
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20466,13 +20573,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 764302321}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &764302323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20644,13 +20752,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 765620076}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &765620078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20822,13 +20931,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 776659254}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.17
-  v: 0.08
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278240702
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &776659256
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21000,13 +21110,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 792116296}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &792116298
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21178,13 +21289,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 797325791}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &797325793
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21356,13 +21468,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 803759970}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &803759972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21534,13 +21647,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 804159221}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &804159223
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21712,13 +21826,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 805504662}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &805504664
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21890,13 +22005,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 827673048}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &827673050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22068,13 +22184,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 842481230}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &842481232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22246,13 +22363,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 842720471}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &842720473
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22424,13 +22542,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 849209114}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &849209116
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22602,13 +22721,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 849384710}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &849384712
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22780,13 +22900,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 852089758}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &852089760
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22958,13 +23079,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 856707360}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &856707362
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23136,13 +23258,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 856822473}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &856822475
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23314,13 +23437,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 859614240}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &859614242
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23492,13 +23616,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 864068311}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &864068313
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23670,13 +23795,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 867665539}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &867665541
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23848,13 +23974,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 872417038}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &872417040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24026,13 +24153,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 883724934}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &883724936
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24204,13 +24332,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 902481990}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &902481992
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24382,13 +24511,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 911758045}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &911758047
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24560,13 +24690,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 933973108}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &933973110
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24738,13 +24869,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 934791351}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &934791353
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24916,13 +25048,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 941915484}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &941915486
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25094,13 +25227,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 945146131}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &945146133
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25272,13 +25406,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 946145180}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &946145182
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25450,13 +25585,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 953571163}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &953571165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25628,13 +25764,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 953637148}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &953637150
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25806,13 +25943,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 955665413}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &955665415
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25984,13 +26122,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 956006678}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &956006680
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26162,13 +26301,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 959128510}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &959128512
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26340,13 +26480,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 959551122}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &959551124
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26518,13 +26659,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 966432237}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &966432239
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26696,13 +26838,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 976454186}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &976454188
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26874,13 +27017,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 992678697}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &992678699
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27052,13 +27196,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1006635124}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1006635126
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27230,13 +27375,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1015893665}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1015893667
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27408,13 +27554,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1023523145}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1023523147
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27586,13 +27733,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1032139398}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1032139400
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27764,13 +27912,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1035507495}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1035507497
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27942,13 +28091,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1035699232}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1035699234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28120,13 +28270,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1043457065}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1043457067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28298,13 +28449,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1046869615}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1046869617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28476,13 +28628,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1047176982}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1047176984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28654,13 +28807,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1047320732}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1047320734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28832,13 +28986,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1047748363}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1047748365
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29010,13 +29165,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1048585976}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1048585978
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29188,13 +29344,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1050253702}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1050253704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29366,13 +29523,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1062796200}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1062796202
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29544,13 +29702,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1064685450}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1064685452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29722,13 +29881,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1079987257}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1079987259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29900,13 +30060,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1083193560}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1083193562
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30078,13 +30239,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1088463365}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1088463367
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30256,13 +30418,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1089558083}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1089558085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30434,13 +30597,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1091397384}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1091397386
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30612,13 +30776,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1093615067}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1093615069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30790,13 +30955,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1101654145}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1101654147
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30968,13 +31134,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1114159865}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1114159867
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31146,13 +31313,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1125549586}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1125549588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31324,13 +31492,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1127760431}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1127760433
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31502,13 +31671,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1138107548}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1138107550
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31680,13 +31850,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1139647728}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1139647730
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31858,13 +32029,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1144158532}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1144158534
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32036,13 +32208,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1147794767}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1147794769
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32214,13 +32387,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1149041047}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1149041049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32392,13 +32566,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1153849994}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1153849996
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32570,13 +32745,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1160268885}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1160268887
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32748,13 +32924,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1161809066}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1161809068
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32926,13 +33103,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1164182139}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1164182141
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33104,13 +33282,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1175061432}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1175061434
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33282,13 +33461,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1181348141}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1181348143
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33460,13 +33640,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1182769606}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1182769608
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33638,13 +33819,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1184582214}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1184582216
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33816,13 +33998,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1186617900}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1186617902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33994,13 +34177,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1194915137}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1194915139
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34172,13 +34356,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1202591196}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1202591198
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34350,13 +34535,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1218378692}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1218378694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34528,13 +34714,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1228813755}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1228813757
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34706,13 +34893,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1231694531}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1231694533
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34884,13 +35072,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1239677700}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1239677702
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35062,13 +35251,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1240005622}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1240005624
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35240,13 +35430,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1246095812}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1246095814
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35418,13 +35609,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1250684674}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1250684676
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35596,13 +35788,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1256367655}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1256367657
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35774,13 +35967,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1266932401}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1266932403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35952,13 +36146,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1267197311}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1267197313
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36130,13 +36325,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1267973534}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1267973536
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36308,13 +36504,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1269903801}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1269903803
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36486,13 +36683,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1274134551}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1274134553
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36664,13 +36862,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1274148592}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1274148594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36842,13 +37041,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1277543385}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1277543387
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37020,13 +37220,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1285575624}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1285575626
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37198,13 +37399,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1317118260}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1317118262
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37376,13 +37578,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1318635238}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1318635240
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37554,13 +37757,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1318678929}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1318678931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37732,13 +37936,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1324631509}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1324631511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37910,13 +38115,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1328601006}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1328601008
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38088,13 +38294,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1333946882}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1333946884
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38266,13 +38473,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1334374495}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1334374497
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38444,13 +38652,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1342722583}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1342722585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38622,13 +38831,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1356153665}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1356153667
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38800,13 +39010,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1358851101}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1358851103
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38978,13 +39189,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1362580651}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1362580653
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39156,13 +39368,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1368090328}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1368090330
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39334,13 +39547,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1368384652}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1368384654
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39512,13 +39726,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1373278998}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1373279000
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39690,13 +39905,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1373418545}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1373418547
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39868,13 +40084,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1375090277}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1375090279
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40046,13 +40263,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1376010967}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1376010969
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40224,13 +40442,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1376021491}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1376021493
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40402,13 +40621,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1382096104}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1382096106
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40698,13 +40918,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1397262661}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1397262663
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40876,13 +41097,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1414433587}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1414433589
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41054,13 +41276,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1416545003}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1416545005
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41232,13 +41455,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1419880539}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1419880541
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41410,13 +41634,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1436188718}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1436188720
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41588,13 +41813,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1437494391}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1437494393
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41766,13 +41992,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1439607693}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1439607695
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41944,13 +42171,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1445294926}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1445294928
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42122,13 +42350,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1448581874}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1448581876
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42300,13 +42529,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1456041237}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1456041239
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42478,13 +42708,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1459592355}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1459592357
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42656,13 +42887,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1469276219}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1469276221
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42834,13 +43066,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1477103407}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1477103409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43012,13 +43245,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1483154054}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1483154056
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43190,13 +43424,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1485947065}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1485947067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43368,13 +43603,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1521139627}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1521139629
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43546,13 +43782,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1523381176}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1523381178
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43724,13 +43961,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1534698258}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1534698260
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43902,13 +44140,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1556315529}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1556315531
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44080,13 +44319,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1559044911}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1559044913
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44258,13 +44498,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1559792715}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1559792717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44436,13 +44677,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1562014702}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1562014704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44614,13 +44856,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1579260567}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1579260569
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44792,13 +45035,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1606751985}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1606751987
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44970,13 +45214,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1610821549}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1610821551
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45148,13 +45393,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1611475857}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1611475859
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45326,13 +45572,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1618229257}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1618229259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45504,13 +45751,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1624731600}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1624731602
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45682,13 +45930,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1633012432}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1633012434
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45860,13 +46109,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1637531840}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1637531842
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46038,13 +46288,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1638159809}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1638159811
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46216,13 +46467,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1639517646}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1639517648
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46512,13 +46764,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1642631964}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1642631966
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46690,13 +46943,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1647071653}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1647071655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46868,13 +47122,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1654419462}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1654419464
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47046,13 +47301,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1656232330}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1656232332
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47224,13 +47480,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1662655525}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1662655527
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47402,13 +47659,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1665562559}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1665562561
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47580,13 +47838,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1670009049}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1670009051
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47758,13 +48017,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1670072103}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1670072105
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47936,13 +48196,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1673399805}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1673399807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48114,13 +48375,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1676668778}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1676668780
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48292,13 +48554,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1677364287}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1677364289
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48470,13 +48733,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1681643679}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1681643681
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48648,13 +48912,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1689485744}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1689485746
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48826,13 +49091,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1689937213}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1689937215
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49004,13 +49270,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1689987093}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1689987095
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49182,13 +49449,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1700749270}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1700749272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49360,13 +49628,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1701896906}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1701896908
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49538,13 +49807,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1704297449}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1704297451
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49716,13 +49986,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1708637780}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1708637782
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49894,13 +50165,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1709000146}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1709000148
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50072,13 +50344,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1709383709}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1709383711
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50250,13 +50523,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1714897786}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1714897788
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50428,13 +50702,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1721288380}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1721288382
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50606,13 +50881,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1742889712}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1742889714
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50863,13 +51139,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1751133072}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1751133074
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -51041,13 +51318,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1760302633}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1760302635
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -51219,13 +51497,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1778050813}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1778050815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -51397,13 +51676,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1779377323}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1779377325
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -51575,13 +51855,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1780962143}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1780962145
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -51753,13 +52034,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1791215750}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1791215752
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -51931,13 +52213,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1794413103}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1794413105
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52109,13 +52392,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1798096517}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1798096519
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52287,13 +52571,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1810870188}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1810870190
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52465,13 +52750,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1836325754}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1836325756
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52643,13 +52929,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1836352822}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1836352824
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52821,13 +53108,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1843644769}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1843644771
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52999,13 +53287,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1854252725}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1854252727
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53243,13 +53532,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1859192316}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1859192318
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53456,13 +53746,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1867405175}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1867405177
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53634,13 +53925,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1877804888}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1877804890
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53812,13 +54104,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1884542901}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1884542903
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53990,13 +54283,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1902190038}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1902190040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54168,13 +54462,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1907257961}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1907257963
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54346,13 +54641,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1918567666}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1918567668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54642,13 +54938,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1933144068}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1933144070
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54820,13 +55117,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1934945584}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1934945586
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54998,13 +55296,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1936281951}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1936281953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55176,13 +55475,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1937970263}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1937970265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55354,13 +55654,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1940039917}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1940039919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55532,13 +55833,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1952328980}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1952328982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55710,13 +56012,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1953076273}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1953076275
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55888,13 +56191,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1956880823}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1956880825
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56066,13 +56370,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1957983993}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1957983995
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56244,13 +56549,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1960566644}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1960566646
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56422,13 +56728,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1966891173}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1966891175
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56600,13 +56907,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1967060265}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1967060267
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56778,13 +57086,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1986223113}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1986223115
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56956,13 +57265,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1999796937}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &1999796939
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57134,13 +57444,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2011781961}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2011781963
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57312,13 +57623,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2019149720}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2019149722
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57490,13 +57802,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2022579086}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2022579088
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57668,13 +57981,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2029605061}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2029605063
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57846,13 +58160,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2032545932}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2032545934
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -58024,13 +58339,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2033712691}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2033712693
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -58202,13 +58518,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2035476055}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2035476057
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -58217,229 +58534,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035476053}
   m_CullTransparentMesh: 0
---- !u!1 &2037529290
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2037529296}
-  - component: {fileID: 2037529295}
-  - component: {fileID: 2037529294}
-  - component: {fileID: 2037529293}
-  - component: {fileID: 2037529292}
-  - component: {fileID: 2037529291}
-  m_Layer: 0
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2037529291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037529290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75ae4a3eb92c9e748bd81636fc3d5d75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 2037529292}
-  u: 0.3
-  v: 0.2
-  outlineColor:
-    serializedVersion: 2
-    rgba: 4281611509
---- !u!114 &2037529292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037529290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: asdasd
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_outlineColor:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_textAlignment: 257
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
-  m_linkedTextComponent: {fileID: 0}
-  m_isLinkedTextComponent: 0
-  m_isTextTruncated: 0
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 0
-  m_isCullingEnabled: 0
-  m_ignoreRectMaskCulling: 0
-  m_ignoreCulling: 1
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_VertexBufferAutoSizeReduction: 1
-  m_firstVisibleCharacter: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_textInfo:
-    textComponent: {fileID: 2037529292}
-    characterCount: 6
-    spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
-    linkCount: 0
-    lineCount: 1
-    pageCount: 1
-    materialCount: 1
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 2037529295}
-  m_subTextObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_maskType: 0
---- !u!222 &2037529293
-CanvasRenderer:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037529290}
-  m_CullTransparentMesh: 0
---- !u!33 &2037529294
-MeshFilter:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037529290}
-  m_Mesh: {fileID: 0}
---- !u!23 &2037529295
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037529290}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!224 &2037529296
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037529290}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 5}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2043708474
 GameObject:
   m_ObjectHideFlags: 0
@@ -58603,13 +58697,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2043708476}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2043708478
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -58781,13 +58876,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2044300527}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2044300529
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -58959,13 +59055,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2051097725}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2051097727
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59137,13 +59234,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2061811889}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2061811891
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59315,13 +59413,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2067620600}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2067620602
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59493,13 +59592,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2069192903}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2069192905
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59671,13 +59771,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2073143768}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2073143770
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59849,13 +59950,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2083419148}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2083419150
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60027,13 +60129,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2087031359}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2087031361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60205,13 +60308,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2098020236}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2098020238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60383,13 +60487,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2100038141}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2100038143
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60561,13 +60666,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2103665172}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2103665174
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60739,13 +60845,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2107509067}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2107509069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60917,13 +61024,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2114291172}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2114291174
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61095,13 +61203,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2121556063}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2121556065
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61273,13 +61382,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2121610504}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2121610506
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61451,13 +61561,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2125964230}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2125964232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61629,13 +61740,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2126385602}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2126385604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61807,13 +61919,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2132253608}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2132253610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61985,13 +62098,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2134989413}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2134989415
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -62163,13 +62277,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2137011815}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2137011817
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -62341,13 +62456,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2137408016}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2137408018
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -62519,13 +62635,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2140218642}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2140218644
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -62697,13 +62814,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2140856395}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2140856397
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -62875,13 +62993,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2144419738}
-  m_canvasRenderer: {fileID: 0}
-  canvas: {fileID: 0}
-  u: 0.86
-  v: 0.73
-  outlineColor:
+  faceDilate: 0
+  outlineWidth: 0
+  effectColor:
     serializedVersion: 2
-    rgba: 4278848229
+    rgba: 4278190080
+  underlayOffsetX: 0
+  underlayOffsetY: 0
+  underlayDilate: 0
 --- !u!222 &2144419740
 CanvasRenderer:
   m_ObjectHideFlags: 0
