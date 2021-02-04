@@ -372,7 +372,7 @@ namespace TMPro
             {
                 return m_outlineWidth;
             }
-            set { if (m_outlineWidth == value) return; m_havePropertiesChanged = true;  m_outlineWidth = value; SetOutlineThickness(value); SetVerticesDirty(); }
+            set { if (m_outlineWidth == value) return; m_havePropertiesChanged = true; m_outlineWidth = value; SetOutlineThickness(value); SetVerticesDirty(); }
         }
         protected float m_outlineWidth = 0.0f;
 
@@ -382,7 +382,7 @@ namespace TMPro
             {
                 return m_faceDilate;
             }
-            set { if (m_faceDilate == value) return; m_havePropertiesChanged = true;  m_faceDilate = value; SetOutlineThickness(value); SetVerticesDirty(); }
+            set { if (m_faceDilate == value) return; m_havePropertiesChanged = true; m_faceDilate = value; SetOutlineThickness(value); SetVerticesDirty(); }
         }
         protected float m_faceDilate = 0.0f;
 
@@ -394,7 +394,7 @@ namespace TMPro
             }
             set
             {
-                if(m_scaleRatioA == value)
+                if (m_scaleRatioA == value)
                 {
                     return;
                 }
@@ -412,7 +412,7 @@ namespace TMPro
             }
             set
             {
-                if(m_underlayDilate == value)
+                if (m_underlayDilate == value)
                 {
                     return;
                 }
@@ -432,7 +432,7 @@ namespace TMPro
             }
             set
             {
-                if(m_underlayOffsetX == value)
+                if (m_underlayOffsetX == value)
                 {
                     return;
                 }
@@ -482,6 +482,9 @@ namespace TMPro
         protected float m_scaleRatioC = 1.0f;
         #endregion
 
+        #region 效果颜色
+        private Quaternion m_rotation = Quaternion.identity;
+
         public Vector4 effectColorFloat
         {
             get
@@ -490,16 +493,56 @@ namespace TMPro
             }
             set
             {
-                if (m_effectColorFloat.Equals(value))
+                bool dirty = false;
+                if (m_effectColorFloat.Equals(value) == false)
                 {
-                    return;
+                    dirty = true;
+                    m_effectColorFloat = value;
                 }
-                m_effectColorFloat = value;
+                if (m_rotation.Equals(transform.rotation) == false)
+                {
+                    dirty = true;
+                    m_rotation = transform.rotation;
+                }
+                if (dirty)
+                {
+                    m_havePropertiesChanged = true;
+                    SetVerticesDirty();
+                }
+            }
+        }
+        protected Vector4 m_effectColorFloat = Vector4.zero;
+
+        protected Vector4 effectColorToTangent
+        {
+            get
+            {
+                Matrix4x4 matrix = new Matrix4x4();
+                matrix.SetTRS(Vector3.zero, m_rotation, Vector3.one);
+                Vector4 tangent = matrix.inverse * m_effectColorFloat;
+                return tangent;
+            }
+        }
+
+        /// <summary>
+        /// 刷新描边效果颜色
+        /// </summary>
+        public void SetEffectColorDirty()
+        {
+            bool dirty = false;
+            if (m_rotation.Equals(transform.rotation) == false)
+            {
+                dirty = true;
+                m_rotation = transform.rotation;
+            }
+            if (dirty)
+            {
                 m_havePropertiesChanged = true;
                 SetVerticesDirty();
             }
         }
-        protected Vector4 m_effectColorFloat = Vector4.zero;
+
+        #endregion
 
         /// <summary>
         /// The point size of the font.
