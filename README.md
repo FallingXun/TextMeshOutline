@@ -32,7 +32,7 @@ TMP的描边效果，可以通过调节各个参数来修改描边效果，包�
 
 查看TMP的Inspector面板（使用TMP_Shader.shader）
 
-![TMP描边参数](https://github.com/FallingXun/TextMeshOutline/blob/main/Images/TMP描边参数.png)
+![TMP描边参数](https://github.com/FallingXun/TextMeshOutline/blob/master/Images/TMP%E6%8F%8F%E8%BE%B9%E5%8F%82%E6%95%B0.png)
 
 可以看到，描边是通过 Softness、Dilate、Outline下的Color、Thickness 四个参数来设置效果的。
 
@@ -44,7 +44,7 @@ TMP_ShaderUtilities.cs中，可以找到对应的shader定义变量：
 
 因此，需要将这些参数传入顶点，这里使用了uv4来进行存储 faceDilate 和 outlineThickness，使用了 tangent 来存储 OutlineColor。（后面会介绍为什么使用 tangent ）
 
-![TMP描边参数变量计算](https://github.com/FallingXun/TextMeshOutline/blob/main/Images/TMP描边参数变量计算.png)
+![TMP描边参数变量计算](https://github.com/FallingXun/TextMeshOutline/blob/master/Images/TMP%E6%8F%8F%E8%BE%B9%E5%8F%82%E6%95%B0%E5%8F%98%E9%87%8F%E8%AE%A1%E7%AE%97.png)
 
 可以看到，faceDilate 和 outlineThickness 的计算都和 scaleRatio_A 有关联，而 scaleRatio_A 对应shader里的 _ScaleRatioA ，所以，除了这两个参数外，还需要将 scaleRatio_A 传入顶点。
 
@@ -54,21 +54,21 @@ outlineColor 有 rgba 4个值信息，如果使用uv3，则需要压缩再传入
 
 然而，当transform发生旋转时，会发现输出的outLineColor发生了变化。经过分析，应该是顶点的 tangent 值传到shader前，乘上了旋转矩阵，因此为了保证最终的 tangent 值能够正确，需要在C#侧将 tangent 左乘上旋转矩阵的逆矩阵，即
 
-![颜色值左乘旋转矩阵逆矩阵](https://github.com/FallingXun/TextMeshOutline/blob/main/Images/颜色值左乘旋转矩阵逆矩阵.png)
+![颜色值左乘旋转矩阵逆矩阵](https://github.com/FallingXun/TextMeshOutline/blob/master/Images/%E9%A2%9C%E8%89%B2%E5%80%BC%E5%B7%A6%E4%B9%98%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5%E9%80%86%E7%9F%A9%E9%98%B5.png)
 
 同理，投影效果相关参数的修改流程也是一样的。
 
 修改完相关C#代码和shader后，会发现shader侧并不能成功读取到新增的 uv4 和tangent 的数据，因为Canvas默认优化这些数据的传输，如下图：
 
-![Canvas的AdditionalShaderChannels](https://github.com/FallingXun/TextMeshOutline/blob/main/Images/Canvas的AdditionalShaderChannels.png)
+![Canvas的AdditionalShaderChannels](https://github.com/FallingXun/TextMeshOutline/blob/master/Images/Canvas%E7%9A%84AdditionalShaderChannels.png)
 
-![Canvas设置顶点数据读取](https://github.com/FallingXun/TextMeshOutline/blob/main/Images/Canvas设置顶点数据读取.png)
+![Canvas设置顶点数据读取](https://github.com/FallingXun/TextMeshOutline/blob/master/Images/Canvas%E8%AE%BE%E7%BD%AE%E9%A1%B6%E7%82%B9%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96.png)
 
 所以，需要在 TMPro_UGUI_Private.cs 中，原本计算使用增加 uv4 和 tangent 的使用。
 
 ### 优化结果
 
-![TMP优化效果展示](https://github.com/FallingXun/TextMeshOutline/blob/main/Images/TMP优化效果展示.png)
+![TMP优化效果展示](https://github.com/FallingXun/TextMeshOutline/blob/master/Images/TMP%E4%BC%98%E5%8C%96%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA.png)
 
 如上图所示，优化后，这里显示的有340个TMP，参数各异，但都能合批处理。
 
