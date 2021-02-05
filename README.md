@@ -73,6 +73,12 @@ outlineColor 有 rgba 4个值信息，如果使用uv3，则需要压缩再传入
 如上图所示，优化后，这里显示的有340个TMP，参数各异，但都能合批处理。
 
 ### 优化总结
-项目上使用最多的字体效果就是描边和投影，所以将这两个部分进行优化，就已经能满足绝大部分项目上的需求，相对来说还是比较实用的。然而还有存在一些小问题：
+项目上使用最多的字体效果就是描边和投影，所以将这两个部分进行优化，就已经能满足绝大部分项目上的需求，相对来说还是比较实用的。总体优化变量为：   
+uv3_x：PackUV(underlayOffsetX, underlayOffsetY)   
+uv3_y：PackUV(underlayDilate, scaleRatioC)   
+uv4_x：PackUV(faceDilate, outlineWidth)   
+uv4_y：scaleRatioA   
+tangent：effectColorToTangent （描边和投影共用一个颜色值）   
+然而还有存在一些小问题：
 1. 修改字体投影效果，需要开启UnderlayOn，去掉宏的时候不能正常处理，暂未定位到原因。
 2. 如果是实时发生旋转变化的UI，由于逆矩阵的计算放在C#侧，所以需要同步更新刷新颜色值。
