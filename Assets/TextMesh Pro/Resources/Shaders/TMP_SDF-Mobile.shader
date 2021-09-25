@@ -91,6 +91,7 @@ SubShader {
 		#include "UnityCG.cginc"
 		#include "UnityUI.cginc"
 		#include "TMPro_Properties.cginc"
+		#include "TMPro.cginc"
 
 		struct vertex_t {
 			UNITY_VERTEX_INPUT_INSTANCE_ID
@@ -100,6 +101,7 @@ SubShader {
 			fixed4	color			: COLOR;
 			float2	texcoord0		: TEXCOORD0;
 			float2	texcoord1		: TEXCOORD1;
+			float2	texcoord2		: TEXCOORD2;
 			float2	texcoord3		: TEXCOORD3;
 		};
 
@@ -115,6 +117,7 @@ SubShader {
 			#if (UNDERLAY_ON | UNDERLAY_INNER)
 			float4	texcoord1		: TEXCOORD3;			// Texture UV, alpha, reserved
 			half2	underlayParam	: TEXCOORD4;			// Scale(x), Bias(y)
+			fixed4 underlayColor : COLOR2;
 			#endif
 		};
 
@@ -143,13 +146,18 @@ SubShader {
 			if(UNITY_MATRIX_P[3][3] == 0) scale = lerp(abs(scale) * (1 - _PerspectiveFilter), scale, abs(dot(UnityObjectToWorldNormal(input.normal.xyz), normalize(WorldSpaceViewDir(vert)))));
 
 			float weight = lerp(_WeightNormal, _WeightBold, bold) / 4.0;
-			weight = (weight + _FaceDilate) * _ScaleRatioA * 0.5;
+			//weight = (weight + _FaceDilate) * _ScaleRatioA * 0.5;
+
+			float2 outlineParam = UnpackUV(input.texcoord3.x);
+			weight = (weight + outlineParam.x) * input.texcoord3.y * 0.5;
 
 			float layerScale = scale;
 
-			scale /= 1 + (_OutlineSoftness * _ScaleRatioA * scale);
+			//scale /= 1 + (_OutlineSoftness * _ScaleRatioA * scale);
+			scale /= 1 + (_OutlineSoftness * input.texcoord3.y * scale);
 			float bias = (0.5 - weight) * scale - 0.5;
-			float outline = _OutlineWidth * _ScaleRatioA * 0.5 * scale;
+			//float outline = _OutlineWidth * input.texcoord3.y * 0.5 * scale;
+			float outline = outlineParam.y * input.texcoord3.y * 0.5 * scale;
 
 			float opacity = input.color.a;
 			#if (UNDERLAY_ON | UNDERLAY_INNER)
@@ -159,17 +167,25 @@ SubShader {
 			fixed4 faceColor = fixed4(input.color.rgb, opacity) * _FaceColor;
 			faceColor.rgb *= faceColor.a;
 
-			fixed4 outlineColor = _OutlineColor;
+			//fixed4 outlineColor = _OutlineColor;
+			fixed4 outlineColor = input.tangent;
 			outlineColor.a *= opacity;
 			outlineColor.rgb *= outlineColor.a;
 			outlineColor = lerp(faceColor, outlineColor, sqrt(min(1.0, (outline * 2))));
 
 			#if (UNDERLAY_ON | UNDERLAY_INNER)
-			layerScale /= 1 + ((_UnderlaySoftness * _ScaleRatioC) * layerScale);
-			float layerBias = (.5 - weight) * layerScale - .5 - ((_UnderlayDilate * _ScaleRatioC) * .5 * layerScale);
 
-			float x = -(_UnderlayOffsetX * _ScaleRatioC) * _GradientScale / _TextureWidth;
-			float y = -(_UnderlayOffsetY * _ScaleRatioC) * _GradientScale / _TextureHeight;
+			// underlayOffsetX,underlayOffsetY
+			float2 uv2_x = UnpackUV(input.texcoord2.x);
+			// underlayDilate,scaleRatioC
+			float2 uv2_y = UnpackUV(input.texcoord2.y);
+
+			//layerScale /= 1 + ((_UnderlaySoftness * _ScaleRatioC) * layerScale);
+			layerScale /= 1 + ((_UnderlaySoftness * uv2_y.y) * layerScale);
+			float layerBias = (.5 - weight) * layerScale - .5 - ((uv2_y.x * uv2_y.y) * .5 * layerScale);
+
+			float x = -(uv2_x.x * uv2_y.y) * _GradientScale / _TextureWidth;
+			float y = -(uv2_x.y * uv2_y.y) * _GradientScale / _TextureHeight;
 			float2 layerOffset = float2(x, y);
 			#endif
 
@@ -187,6 +203,8 @@ SubShader {
 			#if (UNDERLAY_ON || UNDERLAY_INNER)
 			output.texcoord1 = float4(input.texcoord0 + layerOffset, input.color.a, 0);
 			output.underlayParam = half2(layerScale, layerBias);
+			
+			output.underlayColor = input.tangent;
 			#endif
 
 			return output;
@@ -208,13 +226,14 @@ SubShader {
 
 			#if UNDERLAY_ON
 			d = tex2D(_MainTex, input.texcoord1.xy).a * input.underlayParam.x;
-			c += float4(_UnderlayColor.rgb * _UnderlayColor.a, _UnderlayColor.a) * saturate(d - input.underlayParam.y) * (1 - c.a);
+			//c += float4(_UnderlayColor.rgb * _UnderlayColor.a, _UnderlayColor.a) * saturate(d - input.underlayParam.y) * (1 - c.a);
+			c += float4(input.underlayColor.rgb * input.underlayColor.a, input.underlayColor.a) * saturate(d - input.underlayParam.y) * (1 - c.a);
 			#endif
 
 			#if UNDERLAY_INNER
 			half sd = saturate(d - input.param.z);
 			d = tex2D(_MainTex, input.texcoord1.xy).a * input.underlayParam.x;
-			c += float4(_UnderlayColor.rgb * _UnderlayColor.a, _UnderlayColor.a) * (1 - saturate(d - input.underlayParam.y)) * sd * (1 - c.a);
+			c += float4(input.underlayColor.rgb * input.underlayColor.a, input.underlayColor.a) * (1 - saturate(d - input.underlayParam.y)) * sd * (1 - c.a);
 			#endif
 
 			// Alternative implementation to UnityGet2DClipping with support for softness.
