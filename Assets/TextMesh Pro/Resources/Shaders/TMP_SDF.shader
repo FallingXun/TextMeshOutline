@@ -209,6 +209,8 @@ SubShader {
 
 			// underlayOffsetX,underlayOffsetY
 			float2 uv2_x = UnpackUV(input.texcoord2.x);
+			float underlayOffsetX = uv2_x.x * 2 - 1;
+			float underlayOffsetY = uv2_x.y * 2 - 1;
 			// underlayDilate,scaleRatioC
 			float2 uv2_y = UnpackUV(input.texcoord2.y);
 
@@ -219,9 +221,9 @@ SubShader {
 			float bBias = (0.5 - weight) * bScale - 0.5 - ((uv2_y.x * uv2_y.y) * 0.5 * bScale);
 
 			//float x = -(_UnderlayOffsetX * _ScaleRatioC) * _GradientScale / _TextureWidth;
-			float x = -(uv2_x.x * uv2_y.y) * _GradientScale / _TextureWidth;
+			float x = -(underlayOffsetX * uv2_y.y) * _GradientScale / _TextureWidth;
 			//float y = -(_UnderlayOffsetY * _ScaleRatioC) * _GradientScale / _TextureHeight;
-			float y = (uv2_x.y * uv2_y.y) * _GradientScale / _TextureHeight;
+			float y = -(underlayOffsetY * uv2_y.y) * _GradientScale / _TextureHeight;
 			float2 bOffset = float2(x, y);
 		#endif
 

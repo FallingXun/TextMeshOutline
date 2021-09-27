@@ -432,13 +432,14 @@ namespace TMPro
             }
             set
             {
-                if (m_underlayOffsetX == value)
+                float clamp = Mathf.Clamp(value, -1f, 1f);
+                if (m_underlayOffsetX == clamp)
                 {
                     return;
                 }
                 m_havePropertiesChanged = true;
-                m_underlayOffsetX = value;
-                SetOutlineThickness(value);
+                m_underlayOffsetX = clamp;
+                SetOutlineThickness(clamp);
                 SetVerticesDirty();
             }
         }
@@ -452,13 +453,14 @@ namespace TMPro
             }
             set
             {
-                if (m_underlayOffsetY == value)
+                float clamp = Mathf.Clamp(value, -1f, 1f);
+                if (m_underlayOffsetY == clamp)
                 {
                     return;
                 }
                 m_havePropertiesChanged = true;
-                m_underlayOffsetY = value;
-                SetOutlineThickness(value);
+                m_underlayOffsetY = clamp;
+                SetOutlineThickness(clamp);
                 SetVerticesDirty();
             }
         }
